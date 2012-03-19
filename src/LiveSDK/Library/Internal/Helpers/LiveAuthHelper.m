@@ -13,7 +13,7 @@
 #import "UrlHelper.h"
 
 NSString * LIVE_ENDPOINT_AUTH_HOST = @"oauth.live.com";
-NSString * LIVE_ENDPOINT_API_HOST = @"beta.apis.live.net";
+NSString * LIVE_ENDPOINT_API_HOST = @"apis.live.net";
 NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
 
 @implementation LiveAuthHelper
