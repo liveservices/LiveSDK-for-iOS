@@ -103,14 +103,9 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([LiveAuthHelper isiPad]) 
-    {
-        return YES;
-    }
-    else
-    {
-        return interfaceOrientation == UIInterfaceOrientationPortrait;
-    }
+    // We only rotate for iPad.
+    return ([LiveAuthHelper isiPad] || 
+            interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 // User clicked the "Cancel" button.
