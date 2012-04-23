@@ -127,8 +127,9 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 
 - (void)liveOperationSucceeded:(LiveOperation *)operation
 {
+    NSString *encodedFileNamePath = [_fileName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     _uploadPath = [[[operation.result valueForKey:@"upload_location"] 
-                    stringByAppendingString:_fileName ] retain];
+                    stringByAppendingString:encodedFileNamePath] retain];
     if ([StringHelper isNullOrEmpty:_uploadPath])
     {
         NSError *error = [LiveApiHelper createAPIError:LIVE_ERROR_CODE_S_REQUEST_FAILED 
