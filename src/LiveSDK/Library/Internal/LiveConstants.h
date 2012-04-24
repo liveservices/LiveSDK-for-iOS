@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * LIVE_ENDPOINT_AUTH_HOST;
 extern NSString * LIVE_ENDPOINT_API_HOST;
 extern NSString * LIVE_ENDPOINT_LOGIN_HOST;
 
