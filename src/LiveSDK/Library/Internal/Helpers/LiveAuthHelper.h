@@ -55,7 +55,6 @@
                refreshToken:(NSString *)refreshToken;
 
 + (void) overrideLoginServer:(NSString *)loginServer
-                  authServer:(NSString *)authServer
                    apiServer:(NSString *)apiServer;
 
 @end

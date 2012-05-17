@@ -108,7 +108,7 @@
     NSURLRequest *request = connection.request;
     
     STAssertEqualObjects(@"POST", [request HTTPMethod], @"Method should be POST");
-    STAssertEqualObjects(@"https://oauth.live.com/token", request.URL.absoluteString, @"Invalid url");
+    STAssertEqualObjects(@"https://login.live.com/oauth20_token.srf", request.URL.absoluteString, @"Invalid url");
     
     NSString *requestBodyString = [[[NSString alloc] initWithData:request.HTTPBody
                                                          encoding:NSUTF8StringEncoding] 
