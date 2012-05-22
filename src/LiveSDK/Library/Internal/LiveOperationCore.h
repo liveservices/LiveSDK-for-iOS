@@ -19,7 +19,7 @@
 @property (nonatomic, readonly) NSString *method;
 @property (nonatomic, retain) NSData *requestBody;
 @property (nonatomic, readonly) id userState; 
-@property (nonatomic, readonly) id delegate;
+@property (nonatomic, retain) id delegate;
 @property (nonatomic, readonly) LiveConnectClientCore *liveClient;
 @property (nonatomic, retain) NSInputStream *inputStream;
 @property (nonatomic, readonly) NSURL *requestUrl;
