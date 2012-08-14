@@ -17,6 +17,7 @@
 #import "LiveOperationCore.h"
 #import "LiveOperationDelegate.h"
 #import "LiveUploadOperationDelegate.h"
+#import "LiveUploadOverwriteOption.h"
 
 @class LiveAuthRefreshRequest;
 
@@ -65,14 +66,14 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                             data:(NSData *)data
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState;
 
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                      inputStream:(NSInputStream *)inputStream
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState;
 

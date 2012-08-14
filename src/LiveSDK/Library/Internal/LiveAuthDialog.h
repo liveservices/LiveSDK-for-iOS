@@ -13,7 +13,6 @@
 @private
     NSURL *_startUrl;
     NSString * _endUrl;
-    id<LiveAuthDialogDelegate> _delegate;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil 
@@ -22,6 +21,7 @@
                endUrl:(NSString *)endUrl
              delegate:(id<LiveAuthDialogDelegate>)delegate;
 
+@property (assign, nonatomic) id<LiveAuthDialogDelegate> delegate;
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 @property (readonly, nonatomic) BOOL canDismiss;
 

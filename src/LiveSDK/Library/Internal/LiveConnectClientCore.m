@@ -33,7 +33,7 @@
     {
         _clientId = [clientId copy];
         _scopes = [scopes copy];
-        _storage = [[[LiveAuthStorage alloc] initWithClientId:clientId] retain];            
+        _storage = [[LiveAuthStorage alloc] initWithClientId:clientId];            
         _status = LiveAuthUnknown;
         _session = nil;
     }
@@ -44,7 +44,7 @@
 }
 
 - (void)dealloc
-{    
+{ 
     [_clientId release];
     [_scopes release];
     [_session release];
@@ -70,16 +70,16 @@
         return;
     }
     
-    LiveAuthRequest *authRequest = [[LiveAuthRequest alloc] initWithClient:self 
+    LiveAuthRequest *authRequest = [[[LiveAuthRequest alloc] initWithClient:self 
                                                                     scopes:scopes 
                                                      currentViewController:currentViewController 
                                                                   delegate:delegate 
-                                                                 userState:userState];
+                                                                 userState:userState]
+                                    autorelease];
     
     self.authRequest = authRequest;
     
-    [authRequest execute];    
-    [authRequest release];
+    [authRequest execute]; 
 }
 
 - (BOOL) hasPendingUIRequest
@@ -134,13 +134,12 @@
     if ([LiveAuthHelper shouldRefreshToken:_session 
                               refreshToken:_storage.refreshToken]) 
     {
-        authRefreshRequest = [[[LiveAuthRefreshRequest alloc] initWithClientId:_clientId 
+        authRefreshRequest = [[LiveAuthRefreshRequest alloc] initWithClientId:_clientId 
                                                                         scope:_scopes 
                                                                  refreshToken:_storage.refreshToken
                                                                      delegate:delegate
                                                                     userState:userState 
-                                                                   clientStub:self] 
-                             retain];
+                                                                   clientStub:self];
         
         [authRefreshRequest execute];
     }
@@ -194,7 +193,7 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                             data:(NSData *)data
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState
 {
@@ -215,7 +214,7 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                      inputStream:(NSInputStream *)inputStream
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState
 {

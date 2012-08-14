@@ -106,7 +106,6 @@
 
 @interface NSDate (MSJSON_Extensions)
 + (id) dateWithJSONStringValue:(NSString*)value;
-- (id) initWithJSONStringValue:(NSString*)value;
 @end
 
 

@@ -24,10 +24,11 @@
 
 + (NSString *) getXHTTPLiveLibraryHeaderValue;
 
++ (BOOL) isFilePath: (NSString *)path;
+
 + (void) parseApiResponse:(NSData *)data
              textResponse:(NSString **)textResponse
                  response:(NSDictionary **)response
                     error:(NSError **)error;
-
 
 @end

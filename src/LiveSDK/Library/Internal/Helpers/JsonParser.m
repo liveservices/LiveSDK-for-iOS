@@ -608,12 +608,7 @@ static NSCharacterSet *s_CharacterSetBackslashAndQuote = nil;
 @implementation NSDate (MSJSON_Extensions)
 
 + (id) dateWithJSONStringValue:(NSString*)value
-{
-	return [[[self alloc] initWithJSONStringValue:value] autorelease];
-}
-
-- (id) initWithJSONStringValue:(NSString*)value
-{
+{	
 	long long timeValue = 0L;
 	NSDate *date = nil;
 
@@ -623,24 +618,21 @@ static NSCharacterSet *s_CharacterSetBackslashAndQuote = nil;
 	{
 		// Scan the number of 'ticks' (milliseconds since the epoch)
 		if (![scanner scanLongLong:&timeValue] || timeValue == LLONG_MAX || timeValue == LLONG_MIN)
-			goto Error;
+			return nil;
 
 		// Make sure that the date string ends properly
 		if (![scanner scanString:@")/" intoString:NULL] && ![scanner scanString:@")\\/" intoString:NULL])
-			goto Error;
+			return nil;
 		if (![scanner isAtEnd])
-			goto Error;
+			return nil;
 
 		// Get the date for this time value (adjusted to seconds)
 		[self release];
-		date = [[NSDate dateWithTimeIntervalSince1970:(timeValue / 1000.0)] retain];
+		date = [NSDate dateWithTimeIntervalSince1970:(timeValue / 1000.0)];
 		return date;
 	}
-
-  Error:
-	// MSLogWarn(@"Invalid JSON date string value: \"%@\"", value);
-	[self release];
-	return nil;
+    
+    return nil;
 }
 
 @end

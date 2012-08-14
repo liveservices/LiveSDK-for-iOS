@@ -71,11 +71,10 @@
     self = [super init];
     if (self) 
     {
-        _liveClientCore = [[[LiveConnectClientCore alloc] initWithClientId:clientId 
+        _liveClientCore = [[LiveConnectClientCore alloc] initWithClientId:clientId 
                                                                    scopes:[LiveAuthHelper normalizeScopes:scopes] 
                                                                  delegate:delegate 
-                                                                userState:userState]
-                           retain];
+                                                                userState:userState];
     }
     
     return self;
@@ -469,8 +468,8 @@
 {
     return [self uploadToPath:path 
                      fileName:fileName 
-                         data:data // Default to not overwrite.
-                    overwrite:NO 
+                         data:data
+                    overwrite:LiveUploadDoNotOverwrite 
                      delegate:delegate 
                     userState:nil];
 }
@@ -478,7 +477,7 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                             data:(NSData *)data
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState
 {
@@ -513,7 +512,7 @@
     return [self uploadToPath:path 
                      fileName:fileName 
                   inputStream:inputStream 
-                    overwrite:NO // Default to not overwrite.
+                    overwrite:LiveUploadDoNotOverwrite
                      delegate:delegate 
                     userState:nil];
 }
@@ -521,7 +520,7 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                      inputStream:(NSInputStream *)inputStream
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState
 {

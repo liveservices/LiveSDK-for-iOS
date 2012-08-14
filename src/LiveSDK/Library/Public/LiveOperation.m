@@ -25,6 +25,7 @@
 
 - (void)dealloc 
 {
+    liveOpCore.publicOperation = nil;
     [liveOpCore release];
     
     [super dealloc];

@@ -49,7 +49,7 @@
         _method = [method copy];
         _path = [path copy];
         _requestBody = [requestBody retain];
-        _delegate = [delegate retain];
+        _delegate = delegate;
         _userState = [userState retain]; 
         _liveClient = [liveClient retain];
         httpError = nil;
@@ -72,7 +72,7 @@
         _method = [method copy];
         _path = [path copy];
         _inputStream = [inputStream retain];
-        _delegate = [delegate retain];
+        _delegate = delegate;
         _userState = [userState retain]; 
         _liveClient = [liveClient retain];
         completed = NO;
@@ -86,7 +86,6 @@
     [_method release];
     [_path release];
     [_requestBody release];
-    [_delegate release];
     [_userState release];
     [_liveClient release];
     [_inputStream release];
@@ -228,6 +227,11 @@
     if ([_delegate respondsToSelector:@selector(liveOperationFailed:operation:)]) 
     {
         [_delegate liveOperationFailed:error operation:publicOperation];
+        
+        // LiveOperation was returned in the interface return. However, the app may not retain the object
+        // In order to keep it alive, we keep LiveOperationCore and LiveOperation in circular reference.
+        // After the event raised, we set this property to nil to break the circle, so that they are recycled.
+        self.publicOperation = nil;
     }
 }
 
@@ -260,6 +264,10 @@
         if ([_delegate respondsToSelector:@selector(liveOperationSucceeded:)])
         {
             [_delegate liveOperationSucceeded:self.publicOperation];
+            // LiveOperation was returned in the interface return. However, the app may not retain the object
+            // In order to keep it alive, we keep LiveOperationCore and LiveOperation in circular reference.
+            // After the event raised, we set this property to nil to break the circle, so that they are recycled.
+            self.publicOperation = nil;
         }
     }
     else

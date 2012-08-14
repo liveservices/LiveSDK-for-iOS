@@ -17,7 +17,7 @@
 - (id) initWithPath:(NSString *)path
            fileName:(NSString *)fileName
                data:(NSData *)data
-          overwrite:(BOOL)overwrite
+          overwrite:(LiveUploadOverwriteOption)overwrite
            delegate:(id <LiveUploadOperationDelegate>)delegate
           userState:(id)userState
          liveClient:(LiveConnectClientCore *)liveClient
@@ -40,7 +40,7 @@
 - (id) initWithPath:(NSString *)path
            fileName:(NSString *)fileName
         inputStream:(NSInputStream *)inputStream
-          overwrite:(BOOL)overwrite
+          overwrite:(LiveUploadOverwriteOption)overwrite
            delegate:(id <LiveUploadOperationDelegate>)delegate
           userState:(id)userState
          liveClient:(LiveConnectClientCore *)liveClient
@@ -73,12 +73,36 @@
 
 - (NSURL *)requestUrl
 {
-    NSString *overwrite = _overwrite? @"true" : @"false";
-    return [LiveApiHelper buildAPIUrl:_uploadPath
-                               params:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                         @"true", LIVE_API_PARAM_SUPPRESS_RESPONSE_CODES,
-                                       overwrite, LIVE_API_PARAM_OVERWRITE,                 
-                                             nil]];
+    NSString *uploadPath = _uploadPath;
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"true", LIVE_API_PARAM_SUPPRESS_RESPONSE_CODES,
+                                   nil];
+    if (![LiveApiHelper isFilePath:self.path]) 
+    {
+        NSString *encodedFileNamePath = [_fileName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        uploadPath = [uploadPath stringByAppendingString:encodedFileNamePath];
+    
+        NSString *overwrite = @"false";
+        switch (_overwrite) 
+        {
+            case LiveUploadOverwrite:
+                overwrite = @"true";
+                break;
+            case LiveUploadDoNotOverwrite:
+                overwrite = @"false";
+                break;
+            case LiveUploadRename:
+                overwrite = @"choosenewname";
+                break;
+            default:
+                break;
+        }
+        
+        [params setObject:overwrite forKey:LIVE_API_PARAM_OVERWRITE];
+    }
+    
+    return [LiveApiHelper buildAPIUrl:uploadPath
+                               params:params];
 }
 
 - (void) setRequestContentType
@@ -127,9 +151,8 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 
 - (void)liveOperationSucceeded:(LiveOperation *)operation
 {
-    NSString *encodedFileNamePath = [_fileName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    _uploadPath = [[[operation.result valueForKey:@"upload_location"] 
-                    stringByAppendingString:encodedFileNamePath] retain];
+    _uploadPath = [[operation.result valueForKey:@"upload_location"] retain];
+    
     if ([StringHelper isNullOrEmpty:_uploadPath])
     {
         NSError *error = [LiveApiHelper createAPIError:LIVE_ERROR_CODE_S_REQUEST_FAILED 

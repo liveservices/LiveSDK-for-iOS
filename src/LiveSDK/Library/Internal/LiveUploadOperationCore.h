@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "LiveOperationCore.h"
 #import "LiveUploadOperationDelegate.h"
+#import "LiveUploadOverwriteOption.h"
 
 @interface LiveUploadOperationCore : LiveOperationCore <LiveOperationDelegate>
 {
@@ -15,13 +16,13 @@
     NSString *_fileName;
     LiveOperation *_queryUploadLocationOp;
     NSString *_uploadPath;
-    BOOL _overwrite;
+    LiveUploadOverwriteOption _overwrite;
 }
 
 - (id) initWithPath:(NSString *)path
            fileName:(NSString *)fileName
                data:(NSData *)data
-          overwrite:(BOOL)overwrite
+          overwrite:(LiveUploadOverwriteOption)overwrite
            delegate:(id <LiveUploadOperationDelegate>)delegate
           userState:(id)userState
          liveClient:(LiveConnectClientCore *)liveClient;
@@ -29,7 +30,7 @@
 - (id) initWithPath:(NSString *)path
            fileName:(NSString *)fileName
         inputStream:(NSInputStream *)inputStream
-          overwrite:(BOOL)overwrite
+          overwrite:(LiveUploadOverwriteOption)overwrite
            delegate:(id <LiveUploadOperationDelegate>)delegate
           userState:(id)userState
          liveClient:(LiveConnectClientCore *)liveClient;

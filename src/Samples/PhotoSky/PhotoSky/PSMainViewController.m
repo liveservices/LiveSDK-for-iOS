@@ -8,6 +8,9 @@
 #import "PSMainViewController.h"
 #import "PSSkyPhotoViewer.h"
 
+// Set the CLIENT_ID value to be the one you get from http://manage.dev.live.com/
+static NSString * const CLIENT_ID = @"%CLIENT_ID%";
+
 @implementation PSMainViewController
 @synthesize appLogo;
 @synthesize userInfoLabel;
@@ -19,6 +22,10 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    if ([CLIENT_ID isEqualToString:@"%CLIENT_ID%"]) {
+        [NSException raise:NSInvalidArgumentException format:@"The CLIENT_ID value must be specified."];
+    }
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -27,7 +34,7 @@
                    @"wl.basic",
                    @"wl.skydrive",
                    @"wl.offline_access", nil];
-        liveClient = [[LiveConnectClient alloc] initWithClientId:@"%CLIENT_ID%"
+        liveClient = [[LiveConnectClient alloc] initWithClientId:CLIENT_ID 
                                                           scopes:_scopes
                                                         delegate:self];
     }

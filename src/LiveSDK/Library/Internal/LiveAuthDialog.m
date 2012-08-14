@@ -10,7 +10,7 @@
 
 @implementation LiveAuthDialog
 
-@synthesize webView, canDismiss;
+@synthesize webView, canDismiss, delegate = _delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil 
                bundle:(NSBundle *)nibBundleOrNil
@@ -24,7 +24,7 @@
     {
         _startUrl = [startUrl retain];
         _endUrl =  [endUrl retain];
-        _delegate = [delegate retain];
+        _delegate = delegate;
         canDismiss = NO;
     }
     
@@ -35,7 +35,6 @@
 {
     [_startUrl release];
     [_endUrl release];
-    [_delegate release];
     [webView release];
     
     [super dealloc];

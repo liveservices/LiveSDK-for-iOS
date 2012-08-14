@@ -30,7 +30,7 @@
         _clientId = [clientId retain];
         _scopes = [scopes retain];
         _refreshToken = [refreshToken retain];
-        _delegate = [delegate retain];
+        _delegate = delegate;
         _userState = [userState retain];
         _client = client;
     }
@@ -43,7 +43,6 @@
     [_clientId release];
     [_scopes release];
     [_refreshToken release];
-    [_delegate release];
     [_userState release];
     [_client release];
     [tokenConnection release];
@@ -81,7 +80,6 @@
                          session:_client.session
                        userState:_userState];
         
-        [_delegate release];
         _delegate = nil;
     }
 }

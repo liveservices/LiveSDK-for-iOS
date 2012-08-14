@@ -37,7 +37,7 @@ currentViewController:(UIViewController *)currentViewController
         _client = [client retain];
         _scopes = [scopes copy];
         _currentViewController = [currentViewController retain];
-        _delegate = [delegate retain];
+        _delegate = delegate;
         _userState = [userState retain];
         _status = AuthNotStarted;
     }
@@ -47,9 +47,10 @@ currentViewController:(UIViewController *)currentViewController
 
 - (void)dealloc
 {    
+    _authViewController.delegate = nil;
+    
     [_client release];
     [_scopes release];
-    [_delegate release];
     [_userState release];
     
     [_authCode release];
@@ -126,7 +127,6 @@ currentViewController:(UIViewController *)currentViewController
 {
     [self dismissModal];
     [self updateStatus:AuthCompleted];
-    _client.authRequest = nil;
 }
 
 - (void)process
@@ -156,11 +156,11 @@ currentViewController:(UIViewController *)currentViewController
 
     NSString *nibName = [LiveAuthHelper isiPad]? @"LiveAuthDialog_iPad" : @"LiveAuthDialog_iPhone";
     
-    self.authViewController = [[LiveAuthDialog alloc] initWithNibName:nibName
-                                                               bundle:[LiveAuthHelper getSDKBundle] 
-                                                             startUrl:authRequestUrl 
-                                                               endUrl:[LiveAuthHelper getDefaultRedirectUrlString]
-                                                             delegate:self];
+    _authViewController = [[LiveAuthDialog alloc] initWithNibName:nibName
+                                                           bundle:[LiveAuthHelper getSDKBundle] 
+                                                         startUrl:authRequestUrl 
+                                                           endUrl:[LiveAuthHelper getDefaultRedirectUrlString]
+                                                         delegate:self];
     
     // Create a Navigation controller
     UINavigationController *modalDialog = [[[UINavigationController alloc]initWithRootViewController:self.authViewController]

@@ -87,7 +87,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUIText"/>
+						<string key="IBUIText">wl.signin</string>
 						<int key="IBUIBorderStyle">3</int>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
@@ -808,7 +808,6 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="715521310"/>
 							<reference ref="586713524"/>
 							<reference ref="672998534"/>
 							<reference ref="276027280"/>
@@ -831,6 +830,7 @@
 							<reference ref="1039651743"/>
 							<reference ref="764489608"/>
 							<reference ref="417501174"/>
+							<reference ref="715521310"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

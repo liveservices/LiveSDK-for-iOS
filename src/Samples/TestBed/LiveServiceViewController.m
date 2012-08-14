@@ -95,10 +95,15 @@ static NSString * const CLIENT_ID = @"%CLIENT_ID%";
 
 - (void) configureLiveClientWithScopes:(NSString *)scopeText
 {
-    self.liveClient = [[LiveConnectClient alloc] initWithClientId:CLIENT_ID 
+    if ([CLIENT_ID isEqualToString:@"%CLIENT_ID%"]) {
+        [NSException raise:NSInvalidArgumentException format:@"The CLIENT_ID value must be specified."];
+    }
+    
+    self.liveClient = [[[LiveConnectClient alloc] initWithClientId:CLIENT_ID 
                                                            scopes:[scopeText componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
                                                          delegate:self 
-                                                        userState:@"init"];   
+                                                        userState:@"init"] 
+                       autorelease ];   
 }
 
 - (void) loginWithScopes:(NSString *)scopeText
@@ -234,7 +239,7 @@ static NSString * const CLIENT_ID = @"%CLIENT_ID%";
         [self.liveClient uploadToPath:uploadPath
                              fileName:@"volvo_c70.jpg" 
                                  data:data 
-                            overwrite:YES 
+                            overwrite:LiveUploadOverwrite 
                              delegate:self 
                             userState:@"upload"];
     }

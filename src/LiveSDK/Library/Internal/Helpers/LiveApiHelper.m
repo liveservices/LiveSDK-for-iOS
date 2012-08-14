@@ -36,6 +36,7 @@
     }
     else
     {
+        path = [path characterAtIndex:0] == '/'? [path substringFromIndex:1] : path;
         baseUrl = [NSURL URLWithString:path 
                          relativeToURL:[LiveApiHelper getApiServiceBaseUrl]];
     }
@@ -69,6 +70,13 @@
                 [LiveAuthHelper isiPad]? @"iPad" : @"iPhone",
                 [[UIDevice currentDevice] systemVersion], 
                 LIVE_SDK_VERSION]; 
+}
+
++ (BOOL) isFilePath: (NSString *)path
+{
+    NSString *lowerPath = [path lowercaseString];
+    return [[lowerPath substringToIndex:5] isEqualToString:@"file."] || 
+    [[lowerPath substringToIndex:6] isEqualToString:@"/file."];
 }
 
 + (void) parseApiResponse:(NSData *)data

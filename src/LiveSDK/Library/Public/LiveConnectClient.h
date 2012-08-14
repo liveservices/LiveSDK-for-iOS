@@ -12,6 +12,7 @@
 #import "LiveDownloadOperationDelegate.h"
 #import "LiveOperationDelegate.h"
 #import "LiveUploadOperationDelegate.h"
+#import "LiveUploadOverwriteOption.h"
 
 // LiveConnectClient class represents a client object that helps the app to access Live services
 // on the user behalf. LiveConnectClient class provides two groups of methods:
@@ -268,7 +269,7 @@
 // - path: Required. The path of the location where the file should be uploaded to.
 // - fileName: Required. The file name that should be used for the file to be 
 //         uploaded on Skydrive.
-// - overwrite: Optional. A boolean value indicating if the file can overwrite an existing file. The default value is NO.
+// - overwrite: Optional. An enum value indicating the behavior if there is existing file with the same name in the SkyDrive location.
 // - data: Required. The NSData instance that contains the data to upload.
 // - inputStream: Required. The NSInputStream instance that is the source of the data to read and upload.
 // - delegate: Optional. The instance of a class that implements the LiveUploadOperationDelegate protocol.
@@ -284,7 +285,7 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                             data:(NSData *)data
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState;
 
@@ -296,7 +297,7 @@
 - (LiveOperation *) uploadToPath:(NSString *)path
                         fileName:(NSString *)fileName
                      inputStream:(NSInputStream *)inputStream
-                       overwrite:(BOOL)overwrite
+                       overwrite:(LiveUploadOverwriteOption)overwrite
                         delegate:(id <LiveUploadOperationDelegate>)delegate
                        userState:(id)userState;
 

@@ -5,8 +5,6 @@
 //  Copyright (c) 2011 Microsoft. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 // An enum type representing the user's session status.
 typedef enum 
 {

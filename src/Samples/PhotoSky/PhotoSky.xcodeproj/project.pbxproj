@@ -21,8 +21,8 @@
 		520C9CF914FD46BB002BF021 /* PSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C9CF814FD46BB002BF021 /* PSAppDelegate.m */; };
 		5248D13F14FE3DF80096720F /* PSSkyDriveFolderPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5248D13D14FE3DF80096720F /* PSSkyDriveFolderPicker.m */; };
 		5248D14014FE3DF80096720F /* PSSkyDriveFolderPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5248D13E14FE3DF80096720F /* PSSkyDriveFolderPicker.xib */; };
-		52BF3D2D15172E2300F877F5 /* LiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BF3D2C15172E2300F877F5 /* LiveSDK.framework */; };
-		52BF3D2E15172E3000F877F5 /* LiveSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 52BF3D2C15172E2300F877F5 /* LiveSDK.framework */; };
+		529AD799159D8121004A195B /* LiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529AD798159D8121004A195B /* LiveSDK.framework */; };
+		529AD79B159D8129004A195B /* LiveSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 529AD798159D8121004A195B /* LiveSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +48,7 @@
 		5248D13C14FE3DF80096720F /* PSSkyDriveFolderPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSkyDriveFolderPicker.h; sourceTree = "<group>"; };
 		5248D13D14FE3DF80096720F /* PSSkyDriveFolderPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSkyDriveFolderPicker.m; sourceTree = "<group>"; };
 		5248D13E14FE3DF80096720F /* PSSkyDriveFolderPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSSkyDriveFolderPicker.xib; sourceTree = "<group>"; };
-		52BF3D2C15172E2300F877F5 /* LiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiveSDK.framework; path = ../../Products/LiveSDK.framework; sourceTree = "<group>"; };
+		529AD798159D8121004A195B /* LiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiveSDK.framework; path = ../../Products/LiveSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BF3D2D15172E2300F877F5 /* LiveSDK.framework in Frameworks */,
+				529AD799159D8121004A195B /* LiveSDK.framework in Frameworks */,
 				520C9CE914FD46BB002BF021 /* UIKit.framework in Frameworks */,
 				520C9CEB14FD46BB002BF021 /* Foundation.framework in Frameworks */,
 				520C9CED14FD46BB002BF021 /* CoreGraphics.framework in Frameworks */,
@@ -69,7 +69,7 @@
 		520C9CD914FD46BB002BF021 = {
 			isa = PBXGroup;
 			children = (
-				52BF3D2C15172E2300F877F5 /* LiveSDK.framework */,
+				529AD798159D8121004A195B /* LiveSDK.framework */,
 				520C9CEE14FD46BB002BF021 /* PhotoSky */,
 				520C9CE714FD46BB002BF021 /* Frameworks */,
 				520C9CE514FD46BB002BF021 /* Products */,
@@ -178,8 +178,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BF3D2E15172E3000F877F5 /* LiveSDK.framework in Resources */,
 				520C9CF314FD46BB002BF021 /* InfoPlist.strings in Resources */,
+				529AD79B159D8129004A195B /* LiveSDK.framework in Resources */,
 				5207732014FD4ADA007E3059 /* PSSkyPhotoViewer.xib in Resources */,
 				5207732614FD4DD5007E3059 /* PSMainViewController.xib in Resources */,
 				5207732914FD4EA4007E3059 /* skydrive.jpeg in Resources */,

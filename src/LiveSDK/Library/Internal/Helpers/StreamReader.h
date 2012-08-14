@@ -18,7 +18,7 @@
 
 @property (nonatomic, retain) NSMutableData *data;
 @property (nonatomic, retain) NSInputStream *stream;
-@property (nonatomic, retain) id<StreamReaderDelegate> delegate;
+@property (nonatomic, assign) id<StreamReaderDelegate> delegate;
 
 - (id)initWithStream:(NSInputStream *)stream
             delegate:(id<StreamReaderDelegate>)delegate;
