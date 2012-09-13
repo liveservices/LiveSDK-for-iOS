@@ -80,7 +80,7 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
 
 + (NSString *) getAuthDisplayValue
 {
-    return LIVE_AUTH_DISPLAY_TOUCH;
+    return [LiveAuthHelper isiPad] ? LIVE_AUTH_DISPLAY_IOS_TABLET : LIVE_AUTH_DISPLAY_IOS_PHONE;
 }
 
 + (NSURL *) buildAuthUrlWithClientId:(NSString *)clientId
@@ -96,7 +96,6 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
                   [LiveAuthHelper getAuthDisplayValue], LIVE_AUTH_DISPLAY,
                                           scopesString, LIVE_AUTH_SCOPE,
                                               language, LIVE_AUTH_LOCALE,
-                                   //LIVE_AUTH_THEME_IOS, LIVE_AUTH_THEME,
                                                    nil];
     
     return [UrlHelper constructUrl:[LiveAuthHelper getAuthorizeUrl] params:parameters];

@@ -21,7 +21,7 @@ const NSUInteger BUFFERSIZE = 4096;
     self = [super init];
     if (self) 
     {
-        _stream = stream;
+        _stream = [stream retain];
         _delegate = delegate;
     }
     

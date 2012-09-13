@@ -135,6 +135,14 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error 
 {
+    // Ignore the error triggered by page reload
+    if ([error.domain isEqualToString:@"NSURLErrorDomain"] && error.code == -999)
+        return;
+    
+    // Ignore the error triggered by disposing the view.
+    if ([error.domain isEqualToString:@"WebKitErrorDomain"] && error.code == 102)
+        return;
+    
     [_delegate authDialogFailedWithError:error];
 }
 
