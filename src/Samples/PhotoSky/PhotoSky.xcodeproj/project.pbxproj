@@ -21,6 +21,7 @@
 		520C9CF914FD46BB002BF021 /* PSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C9CF814FD46BB002BF021 /* PSAppDelegate.m */; };
 		5248D13F14FE3DF80096720F /* PSSkyDriveFolderPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5248D13D14FE3DF80096720F /* PSSkyDriveFolderPicker.m */; };
 		5248D14014FE3DF80096720F /* PSSkyDriveFolderPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5248D13E14FE3DF80096720F /* PSSkyDriveFolderPicker.xib */; };
+		526B94A617692BD0000E29D2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 526B94A517692BD0000E29D2 /* Default-568h@2x.png */; };
 		529AD799159D8121004A195B /* LiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529AD798159D8121004A195B /* LiveSDK.framework */; };
 		529AD79B159D8129004A195B /* LiveSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 529AD798159D8121004A195B /* LiveSDK.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		5248D13C14FE3DF80096720F /* PSSkyDriveFolderPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSkyDriveFolderPicker.h; sourceTree = "<group>"; };
 		5248D13D14FE3DF80096720F /* PSSkyDriveFolderPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSkyDriveFolderPicker.m; sourceTree = "<group>"; };
 		5248D13E14FE3DF80096720F /* PSSkyDriveFolderPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSSkyDriveFolderPicker.xib; sourceTree = "<group>"; };
+		526B94A517692BD0000E29D2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		529AD798159D8121004A195B /* LiveSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiveSDK.framework; path = ../../Products/LiveSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		520C9CEF14FD46BB002BF021 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				526B94A517692BD0000E29D2 /* Default-568h@2x.png */,
 				5207732714FD4EA4007E3059 /* skydrive.jpeg */,
 				520C9CF014FD46BB002BF021 /* PhotoSky-Info.plist */,
 				520C9CF114FD46BB002BF021 /* InfoPlist.strings */,
@@ -153,7 +156,7 @@
 		520C9CDB14FD46BB002BF021 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Microsoft;
 			};
 			buildConfigurationList = 520C9CDE14FD46BB002BF021 /* Build configuration list for PBXProject "PhotoSky" */;
@@ -184,6 +187,7 @@
 				5207732614FD4DD5007E3059 /* PSMainViewController.xib in Resources */,
 				5207732914FD4EA4007E3059 /* skydrive.jpeg in Resources */,
 				5248D14014FE3DF80096720F /* PSSkyDriveFolderPicker.xib in Resources */,
+				526B94A617692BD0000E29D2 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +235,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -244,6 +252,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -257,12 +266,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

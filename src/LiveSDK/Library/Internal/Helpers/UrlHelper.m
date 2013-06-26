@@ -26,7 +26,7 @@
     return [entrylist componentsJoinedByString:@"&"];
 }
 
-+ (NSDictionary *) decodeUrlParameters: (NSString *)paramStr 
++ (NSDictionary *) decodeUrlParameters: (NSString *)paramStr
 {
     NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
     
@@ -50,11 +50,9 @@
         return [NSURL URLWithString:baseUrl];
     }
     
-    NSRange range = [baseUrl rangeOfString:@"?"];
-    NSString *joinChar = (range.location == NSNotFound)? @"?" : @"&";
     NSString *query = [UrlHelper encodeUrlParameters:params];
     
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", baseUrl, joinChar, query]];
+    return [NSURL URLWithString:[UrlHelper appendQueryString:query toPath:baseUrl]];
 }
 
 + (NSDictionary *)parseUrl:(NSURL *)url 
@@ -86,6 +84,30 @@
     }
     
     return NO;
+}
+
++ (NSString *) getQueryString: (NSString *)path
+{
+    return [[NSURL URLWithString:path] query];
+}
+
++ (NSString *) appendQueryString: (NSString *)query toPath: (NSString *)path
+{
+    if ([StringHelper isNullOrEmpty:query])
+    {
+        return path;
+    }
+    
+    if ([path rangeOfString:query].location != NSNotFound)
+    {
+        // The path already contains the query.
+        return path;
+    }
+    
+    NSRange range = [path rangeOfString:@"?"];
+    NSString *joinChar = (range.location == NSNotFound)? @"?" : @"&";
+    
+    return [NSString stringWithFormat:@"%@%@%@", path, joinChar, query];
 }
 
 @end

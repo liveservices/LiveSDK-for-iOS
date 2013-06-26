@@ -17,4 +17,7 @@
 
 + (BOOL) isFullUrl:(NSString *)url;
 
++ (NSString *) getQueryString: (NSString *)path;
++ (NSString *) appendQueryString: (NSString *)query toPath: (NSString *)path;
+
 @end
