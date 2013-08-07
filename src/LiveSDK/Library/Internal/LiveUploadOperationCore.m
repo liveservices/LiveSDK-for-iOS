@@ -101,7 +101,11 @@
         [params setObject:overwrite forKey:LIVE_API_PARAM_OVERWRITE];
     }
     
-    return [LiveApiHelper buildAPIUrl:uploadPath
+    // Ensure that we carry over the original query path to the upload path
+    NSString *query = [UrlHelper getQueryString:self.path];
+    NSString *baseUrl = [UrlHelper appendQueryString:query toPath:uploadPath];
+    
+    return [LiveApiHelper buildAPIUrl:baseUrl
                                params:params];
 }
 

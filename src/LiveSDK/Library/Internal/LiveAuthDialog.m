@@ -102,9 +102,13 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // We only rotate for iPad.
-    return ([LiveAuthHelper isiPad] || 
-            interfaceOrientation == UIInterfaceOrientationPortrait);
+    // This mehtod is supported in iOS 5. On iOS 6, this method is replaced with
+    // (BOOL)shouldAutorotate and (NSUInteger)supportedInterfaceOrientations
+    // We don't implement the iOS 6 rotating methods because we choose the default behavior.
+    // The behavior specified here for iOS 5 is consistent with iOS6 default behavior. 
+    // iPad: Rotate to any orientation
+    // iPhone: Rotate to any orientation except for portrait upside down.
+    return ([LiveAuthHelper isiPad] || (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown));
 }
 
 // User clicked the "Cancel" button.
@@ -123,9 +127,10 @@
     if ([[url absoluteString] hasPrefix: _endUrl]) 
     {
         [_delegate authDialogCompletedWithResponse:url];
-        return NO;
-    } 
+    }
     
+    // Always return YES to work around an issue on iOS 6 that returning NO may cause
+    // next Login request on UIWebView to hang.
     return YES;
 }
 
@@ -149,7 +154,6 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    
 }
 
 @end
