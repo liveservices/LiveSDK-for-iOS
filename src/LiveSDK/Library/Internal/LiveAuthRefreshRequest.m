@@ -40,6 +40,8 @@
 
 - (void) dealloc
 {
+    [tokenConnection setDelegate:nil];
+
     [_clientId release];
     [_scopes release];
     [_refreshToken release];
