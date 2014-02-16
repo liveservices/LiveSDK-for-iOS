@@ -32,7 +32,7 @@
         _refreshToken = [refreshToken retain];
         _delegate = delegate;
         _userState = [userState retain];
-        _client = client;
+        _client = [client retain];
     }
     
     return self;
