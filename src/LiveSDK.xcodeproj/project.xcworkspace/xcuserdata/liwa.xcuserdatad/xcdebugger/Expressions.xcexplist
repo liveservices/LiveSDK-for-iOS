@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[LiveConnectClientCore initWithClientId:redirectUri:scopes:delegate:userState:]:LiveConnectClientCore.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveDownloadOperationCore operationCompleted]:LiveDownloadOperationCore.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveOperationCore sendRequest]:LiveOperationCore.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self requestBody]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveDownloadOperationCore operationReceivedData:]:LiveDownloadOperationCore.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[progress totalBytes]">
+            </PersistentString>
+            <PersistentString
+               value = "progress.progressPercentage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveServiceViewController_iPhone liveOperationSucceeded:]:LiveServiceViewController_iPhone.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[operation userState]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveServiceViewController_iPhone liveOperationProgressed:data:operation:]:LiveServiceViewController_iPhone.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveOperationCore connection:didReceiveResponse:]:LiveOperationCore.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "httpResponse">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LiveUploadOperationCore connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:]:LiveUploadOperationCore.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[progress bytesTransferred]">
+            </PersistentString>
+            <PersistentString
+               value = "[progress totalBytes]">
+            </PersistentString>
+            <PersistentString
+               value = "[progress progressPercentage]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
