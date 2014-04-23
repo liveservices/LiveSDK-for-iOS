@@ -6,7 +6,7 @@ version 5.6
 1. Introduction
 ---------------
 
-The Live SDK for iOS library is intended to help developers to easily integrate SkyDrive and Hotmail contacts and calendars into their iOS apps.
+The Live SDK for iOS library is intended to help developers to easily integrate OneDrive into their iOS apps.
 
 The repository here includes:
 - Live SDK Library source (src/LiveSDK/Library)
