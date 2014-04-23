@@ -1,7 +1,7 @@
 Live SDK for iOS 
 ================
 
-version 5.5
+version 5.6
 
 1. Introduction
 ---------------
@@ -41,7 +41,7 @@ If you reference the iOS API source code directly and you use Xcode 4.2 or later
 3. Documentation
 ----------------
 
-Visit: http://dev.live.com and click the "Documentation" link. 
+Visit: http://dev.onedrive.com and click the "Documentation" link. 
 
 4. Known issues:
 ----------------
