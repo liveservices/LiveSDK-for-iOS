@@ -41,9 +41,4 @@ If you reference the iOS API source code directly and you use Xcode 4.2 or later
 3. Documentation
 ----------------
 
-Visit: http://dev.onedrive.com and click the "Documentation" link. 
-
-4. Known issues:
-----------------
-
-* Live Auth UI on iPad does not render properly in portrait orientation.
+Visit: http://dev.onedrive.com and click the "Develop” link. 

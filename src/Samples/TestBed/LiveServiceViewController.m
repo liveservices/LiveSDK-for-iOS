@@ -9,7 +9,7 @@
 #import "LiveAuthHelper.h"
 
 // Set the CLIENT_ID value to be the one you get from http://manage.dev.live.com/
-static NSString * const CLIENT_ID = @"%CLIENT_ID%";
+static NSString * const CLIENT_ID = @"000000004808C307"; //@"%CLIENT_ID%";
 
 @implementation LiveServiceViewController
 
