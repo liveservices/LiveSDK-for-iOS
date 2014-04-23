@@ -113,9 +113,10 @@
     NSString *requestBodyString = [[[NSString alloc] initWithData:request.HTTPBody
                                                          encoding:NSUTF8StringEncoding] 
                                    autorelease];
-    STAssertEqualObjects(@"scope=wl.signin%20wl.basic&grant_type=refresh_token&refresh_token=refresh%20token&client_id=56789999932", requestBodyString, @"Invalid url");
+    STAssertEqualObjects(@"client_id=56789999932&refresh_token=refresh%20token&scope=wl.signin%20wl.basic&grant_type=refresh_token", requestBodyString, @"Invalid url");
     STAssertEqualObjects(LIVE_AUTH_POST_CONTENT_TYPE, [request valueForHTTPHeaderField:LIVE_API_HEADER_CONTENTTYPE], @"Incorrect content-type.");
-    
+        
+
     // set response
     id delegate = connection.delegate;
     MockResponse *response = [[[MockResponse alloc] init] autorelease];

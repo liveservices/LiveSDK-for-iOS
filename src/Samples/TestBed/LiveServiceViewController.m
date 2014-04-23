@@ -103,12 +103,12 @@ static NSString * const CLIENT_ID = @"%CLIENT_ID%";
                                                            scopes:[scopeText componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
                                                          delegate:self 
                                                         userState:@"init"] 
-                       autorelease ];   
+                       autorelease ];
 }
 
 - (void) loginWithScopes:(NSString *)scopeText
 {
-    @try 
+    @try
     {
         NSArray *scopes = [scopeText componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [liveClient login:self
@@ -400,14 +400,14 @@ static NSString * const CLIENT_ID = @"%CLIENT_ID%";
 
 - (void) liveDownloadOperationProgressed:(LiveOperationProgress *)progress data:(NSData *)receivedData operation:(LiveDownloadOperation *)operation
 {
-    NSString *text = [NSString stringWithFormat:@"Download in progress..%u bytes(%f %%, total %u bytes) has been transferred.", progress.bytesTransferred, progress.progressPercentage * 100, progress.totalBytes ];
+    NSString *text = [NSString stringWithFormat:@"Download in progress..%u bytes(%f %%, total %u bytes) has been transferred.", (unsigned int)progress.bytesTransferred, progress.progressPercentage * 100, (unsigned int)progress.totalBytes ];
     [self appendOutput:text];
 }
 
 - (void) liveUploadOperationProgressed:(LiveOperationProgress *)progress 
                              operation:(LiveOperation *)operation
 {
-    NSString *text = [NSString stringWithFormat:@"Upload in progress. %u bytes(%f %%, total %u bytes) has been transferred.", progress.bytesTransferred, progress.progressPercentage * 100, progress.totalBytes ];
+    NSString *text = [NSString stringWithFormat:@"Upload in progress. %u bytes(%f %%, total %u bytes) has been transferred.", (unsigned int)progress.bytesTransferred, progress.progressPercentage * 100, (unsigned int)progress.totalBytes ];
     [self appendOutput:text];
 }
 

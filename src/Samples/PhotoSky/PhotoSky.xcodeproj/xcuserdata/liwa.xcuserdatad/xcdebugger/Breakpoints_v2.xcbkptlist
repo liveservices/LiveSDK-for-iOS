@@ -28,11 +28,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "PhotoSky/PSMainViewController.m"
-            timestampString = "393268676.342361"
+            timestampString = "352192213.666307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-liveOperationSucceeded:"
             landmarkType = "5">
          </BreakpointContent>
@@ -67,8 +67,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
             endingLineNumber = "169"
-            landmarkName = "-folderContentLoadingFailed:sender:"
-            landmarkType = "5">
+            landmarkName = "@implementation PSSkyDriveObject"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -147,11 +147,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "PhotoSky/PSMainViewController.m"
-            timestampString = "393268676.342361"
+            timestampString = "355309780.371948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-updateUI"
             landmarkType = "5">
          </BreakpointContent>
@@ -164,11 +164,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "PhotoSky/PSMainViewController.m"
-            timestampString = "393268676.342361"
+            timestampString = "355309787.436969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-authCompleted:session:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -187,22 +187,6 @@
             endingLineNumber = "29"
             landmarkName = "@interface PSSkyDriveFolderPicker"
             landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PhotoSky/PSMainViewController.m"
-            timestampString = "410491176.642795"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "-authCompleted:session:userState:"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

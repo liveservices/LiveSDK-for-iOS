@@ -225,7 +225,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 {
 	// Check to see if this object is already on the stack. If so, then throw a cycle exception.
 	if ([_objectStack indexOfObjectIdenticalTo:value] != NSNotFound)
-		[NSException raise:MSJSONWriterCycleException format:@"Cycle found when generating JSON text: %08X", (NSUInteger)value];
+		[NSException raise:MSJSONWriterCycleException format:@"Cycle found when generating JSON text: %08X", (unsigned int)value];
 
 	// Add this object to the stack.
 	[_objectStack addObject:value];
@@ -296,7 +296,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 {
 	// Check to see if this object is already on the stack. If so, then throw a cycle exception.
 	if ([_objectStack indexOfObjectIdenticalTo:value] != NSNotFound)
-		[NSException raise:MSJSONWriterCycleException format:@"Cycle found when generating JSON text: %08X", (NSUInteger)value];
+		[NSException raise:MSJSONWriterCycleException format:@"Cycle found when generating JSON text: %08X", (unsigned int)value];
 
 	// Add this object to the stack.
 	[_objectStack addObject:value];

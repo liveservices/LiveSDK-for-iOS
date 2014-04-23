@@ -241,11 +241,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362633532.89297"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "-sendRequestWithMethod:path:jsonBody:delegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -258,11 +258,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362633532.89297"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "-downloadFromPath:delegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -815,11 +815,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "350284680.946256"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "-refreshSessionWithDelegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1552,7 +1552,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             isPathRelative = "1"
@@ -1727,11 +1727,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveAuthRefreshRequest.m"
-            timestampString = "362633532.89297"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-complete"
             landmarkType = "5">
          </BreakpointContent>
@@ -1744,11 +1744,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveAuthRefreshRequest.m"
-            timestampString = "362638573.273815"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-connectionDidFinishLoading:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2181,7 +2181,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             isPathRelative = "1"
@@ -2203,12 +2203,12 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "Samples/TestBed/LiveServiceViewController.m"
-            timestampString = "376337455.442974"
+            timestampString = "415239492.529735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
-            landmarkName = "-authCompleted:session:userState:"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
+            landmarkName = "-authFailed:userState:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2220,12 +2220,12 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "Samples/TestBed/LiveServiceViewController.m"
-            timestampString = "376337455.442974"
+            timestampString = "415239492.529735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
-            landmarkName = "-authFailed:userState:"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "-liveOperationSucceeded:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2271,11 +2271,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveAuthRefreshRequest.m"
-            timestampString = "362638573.273815"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-connection:didReceiveResponse:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2288,11 +2288,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveAuthRefreshRequest.m"
-            timestampString = "362633532.89297"
+            timestampString = "415240154.449502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-execute"
             landmarkType = "5">
          </BreakpointContent>
@@ -2322,11 +2322,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "Samples/TestBed/LiveServiceViewController.m"
-            timestampString = "376337455.442974"
+            timestampString = "415239492.529735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "-liveOperationSucceeded:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2339,11 +2339,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "Samples/TestBed/LiveServiceViewController.m"
-            timestampString = "376337455.442974"
+            timestampString = "415239492.529735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "-onClickUploadButton:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2407,11 +2407,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362635194.846278"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-login:scopes:delegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2424,11 +2424,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362635241.892123"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-logoutWithDelegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2441,11 +2441,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362635258.300599"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-refreshSessionWithDelegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2475,11 +2475,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362638573.273815"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-login:scopes:delegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2509,11 +2509,11 @@
             continueAfterRunningActions = "No"
             isPathRelative = "1"
             filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
-            timestampString = "362637146.147606"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "-login:scopes:delegate:userState:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2610,11 +2610,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Samples/TestBed/LiveServiceViewController.m"
-            timestampString = "376337668.483938"
+            timestampString = "415239492.529735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-configureLiveClientWithScopes:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2638,7 +2638,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveSDK/Library/Internal/LiveAuthDialog.m"
@@ -2686,7 +2686,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveSDK/Library/Internal/LiveAuthDialog.m"
@@ -2735,13 +2735,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LiveSDK/Library/Internal/Helpers/LiveAuthHelper.m"
-            timestampString = "410484321.242625"
+            filePath = "LiveSDK/Library/Internal/LiveAuthRefreshRequest.m"
+            timestampString = "415241641.814876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "+getSDKBundle"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-complete"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveSDK/Library/Internal/LiveAuthRefreshRequest.m"
+            timestampString = "415240485.513991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-dealloc"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveSDK/Library/Internal/LiveConnectClientCore.m"
+            timestampString = "415241641.814876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

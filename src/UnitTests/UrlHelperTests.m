@@ -13,8 +13,9 @@
 - (void) testUrlParameterEncoding
 {
     NSDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value 1", @"key1", @"value 2", @"key2", nil ];
-    STAssertEqualObjects(@"key2=value%202&key1=value%201", [UrlHelper encodeUrlParameters:params], @"Encoding incorrectly");
+    STAssertEqualObjects(@"key1=value%201&key2=value%202", [UrlHelper encodeUrlParameters:params], @"Encoding incorrectly");
 }
+
 
 - (void) testUrlParameterDecoding
 {
@@ -36,7 +37,7 @@
     NSURL *url = [UrlHelper constructUrl:@"http://apis.live.net/v5.0/obj001"
                                   params:[NSMutableDictionary dictionaryWithObjectsAndKeys:@"value 1", @"key1", @"value 2", @"key2", nil ]];
     
-    STAssertEqualObjects(@"http://apis.live.net/v5.0/obj001?key2=value%202&key1=value%201", url.absoluteString, @"Construct Url incorrrectly");
+    STAssertEqualObjects(@"http://apis.live.net/v5.0/obj001?key1=value%201&key2=value%202", url.absoluteString, @"Construct Url incorrrectly");
 }
 
 - (void) testConstructUrl_WithParamsAndParams
@@ -44,7 +45,7 @@
     NSURL *url = [UrlHelper constructUrl:@"http://apis.live.net/v5.0/obj001?key3=V3"
                                   params:[NSMutableDictionary dictionaryWithObjectsAndKeys:@"value 1", @"key1", @"value 2", @"key2", nil ]];
     
-    STAssertEqualObjects(@"http://apis.live.net/v5.0/obj001?key3=V3&key2=value%202&key1=value%201", url.absoluteString, @"Construct Url incorrrectly");
+    STAssertEqualObjects(@"http://apis.live.net/v5.0/obj001?key3=V3&key1=value%201&key2=value%202", url.absoluteString, @"Construct Url incorrrectly");
 }
 
 - (void) testParseUrl

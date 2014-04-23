@@ -1914,8 +1914,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "381"
          endingLineNumber = "381"
-         landmarkName = "-liveOperationSucceeded:"
-         landmarkType = "5">
+         landmarkName = "@implementation LiveServiceViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

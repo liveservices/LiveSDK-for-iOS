@@ -32,7 +32,7 @@
         _refreshToken = [refreshToken retain];
         _delegate = delegate;
         _userState = [userState retain];
-        _client = [client retain];
+        _client = client;
     }
     
     return self;
@@ -40,11 +40,12 @@
 
 - (void) dealloc
 {
+    [tokenConnection cancel];
+    
     [_clientId release];
     [_scopes release];
     [_refreshToken release];
     [_userState release];
-    [_client release];
     [tokenConnection release];
     [tokenResponseData release];
     
@@ -65,6 +66,11 @@
                                                                          scope:_scopes]];
     
     self.tokenConnection = [LiveConnectionHelper createConnectionWithRequest:request delegate:self];
+}
+
+- (void) cancel
+{
+    [self.tokenConnection cancel];
 }
 
 - (void) complete

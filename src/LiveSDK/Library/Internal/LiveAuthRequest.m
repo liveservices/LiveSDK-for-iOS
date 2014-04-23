@@ -34,7 +34,7 @@ currentViewController:(UIViewController *)currentViewController
     self = [super init];
     if (self) 
     {
-        _client = [client retain];
+        _client = client;
         _scopes = [scopes copy];
         _currentViewController = [currentViewController retain];
         _delegate = delegate;
@@ -48,8 +48,8 @@ currentViewController:(UIViewController *)currentViewController
 - (void)dealloc
 {    
     _authViewController.delegate = nil;
+    [_tokenConnection cancel];
     
-    [_client release];
     [_scopes release];
     [_userState release];
     

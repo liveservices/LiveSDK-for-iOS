@@ -16,4 +16,9 @@
 {
     return [[[MockUrlConnection alloc] init] autorelease];
 }
+
+- (void)cancel
+{
+    
+}
 @end

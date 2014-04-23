@@ -149,7 +149,7 @@
     
     // Configure the cell...
     PSSkyDriveObject *skydriveObj = [self.currentFolder.folders objectAtIndex:indexPath.row];
-	cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d folders; %d files)", skydriveObj.name, skydriveObj.folders.count, skydriveObj.files.count];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d folders; %d files)", skydriveObj.name, (int)skydriveObj.folders.count, (int)skydriveObj.files.count];
     
     return cell;
 }

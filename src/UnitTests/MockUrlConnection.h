@@ -13,5 +13,5 @@
 
 @property (nonatomic, retain) NSURLRequest *request;
 @property (nonatomic, retain) id delegate;
-
+- (void)cancel;
 @end
