@@ -136,12 +136,13 @@
     if ([LiveAuthHelper shouldRefreshToken:_session 
                               refreshToken:_storage.refreshToken]) 
     {
-        authRefreshRequest = [[LiveAuthRefreshRequest alloc] initWithClientId:_clientId 
-                                                                        scope:_scopes 
-                                                                 refreshToken:_storage.refreshToken
-                                                                     delegate:delegate
-                                                                    userState:userState 
-                                                                   clientStub:self];
+        authRefreshRequest = [[[LiveAuthRefreshRequest alloc] initWithClientId:_clientId
+                                                                         scope:_scopes
+                                                                  refreshToken:_storage.refreshToken
+                                                                      delegate:delegate
+                                                                     userState:userState
+                                                                    clientStub:self]
+                              autorelease];
         
         [authRefreshRequest execute];
     }
