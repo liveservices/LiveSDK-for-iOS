@@ -13,6 +13,8 @@ The repository here includes:
 - Live SDK framework (bin/LiveSDK.framework.zip)
 - Samples (src/samples)
 
+For questions on how to use the sdk visit http://stackoverflow.com/questions/tagged/onedrive
+
 2. Reference the API
 --------------------
 
