@@ -18,6 +18,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "LiveAuthDelegate.h"
 #import "LiveConnectSession.h"
 #import "LiveDownloadOperation.h"
