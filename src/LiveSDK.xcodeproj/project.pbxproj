@@ -33,15 +33,15 @@
 		5207541814987F440058A61E /* LiveApiHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F76E8F147A308500DA0A46 /* LiveApiHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5207541914987F440058A61E /* StreamReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 52AB74BA148D5548004FC55A /* StreamReader.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5207541A14987FD30058A61E /* LiveAuthDialog_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F76E94147A3FA500DA0A46 /* LiveAuthDialog_iPad.xib */; };
-		5207541B149880140058A61E /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; };
-		5210CF82149290E400C525F3 /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AEE14912DB8001E1E17 /* LiveAuthRefreshRequest.m */; };
-		5210CF83149290E400C525F3 /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AE514909F16001E1E17 /* LiveAuthStorage.m */; };
-		5210CF84149290E400C525F3 /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B494521488BDF5001EA573 /* LiveDownloadOperationCore.m */; };
-		5210CF85149290E400C525F3 /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4946E148B7D67001EA573 /* LiveUploadOperationCore.m */; };
-		5210CF86149290E400C525F3 /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB74BB148D5548004FC55A /* StreamReader.m */; };
-		5210CF87149290E400C525F3 /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
-		5210CF881492912100C525F3 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; };
-		5210CF961494446000C525F3 /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; };
+		5207541B149880140058A61E /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF82149290E400C525F3 /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AEE14912DB8001E1E17 /* LiveAuthRefreshRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF83149290E400C525F3 /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AE514909F16001E1E17 /* LiveAuthStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF84149290E400C525F3 /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B494521488BDF5001EA573 /* LiveDownloadOperationCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF85149290E400C525F3 /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4946E148B7D67001EA573 /* LiveUploadOperationCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF86149290E400C525F3 /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB74BB148D5548004FC55A /* StreamReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF87149290E400C525F3 /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF881492912100C525F3 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5210CF961494446000C525F3 /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5210CF9D14954C0A00C525F3 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; };
 		5210CF9E14954C5300C525F3 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175B1471FFFE009E8BD6 /* JsonParser.m */; };
 		5210CF9F14954C5300C525F3 /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175D1471FFFF009E8BD6 /* JsonWriter.m */; };
@@ -64,8 +64,8 @@
 		52559D9A1506EC7100F0DF04 /* UrlHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D801506EA7400F0DF04 /* UrlHelperTests.m */; };
 		526B94AE17692E5F000E29D2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 526B94AD17692E5F000E29D2 /* Default-568h@2x.png */; };
 		528517311471A30C009E8BD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5285172F1471A30C009E8BD6 /* InfoPlist.strings */; };
-		5285175F14720000009E8BD6 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175B1471FFFE009E8BD6 /* JsonParser.m */; };
-		5285176014720000009E8BD6 /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175D1471FFFF009E8BD6 /* JsonWriter.m */; };
+		5285175F14720000009E8BD6 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175B1471FFFE009E8BD6 /* JsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5285176014720000009E8BD6 /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175D1471FFFF009E8BD6 /* JsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5285183B14728292009E8BD6 /* LiveAuthDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6CE146C7550000973C1 /* LiveAuthDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5285183C14728292009E8BD6 /* LiveConnectClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6CF146C7550000973C1 /* LiveConnectClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5285183D14728292009E8BD6 /* LiveConnectSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6D1146C7550000973C1 /* LiveConnectSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,18 +83,18 @@
 		5285184C147282C2009E8BD6 /* LiveAuthHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6FB146E36CA000973C1 /* LiveAuthHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5285184D147282C2009E8BD6 /* StringHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6E1146C761C000973C1 /* StringHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5285184E147282C2009E8BD6 /* UrlHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6E3146C761C000973C1 /* UrlHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		52851850147282E8009E8BD6 /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB712146F5809000973C1 /* LiveAuthRequest.m */; };
-		52851851147282E8009E8BD6 /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */; };
-		52851852147282E8009E8BD6 /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EC146C7A39000973C1 /* LiveOperationCore.m */; };
-		52851854147282E8009E8BD6 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175B1471FFFE009E8BD6 /* JsonParser.m */; };
-		52851855147282E8009E8BD6 /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175D1471FFFF009E8BD6 /* JsonWriter.m */; };
-		52851856147282E8009E8BD6 /* LiveAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6FC146E36CA000973C1 /* LiveAuthHelper.m */; };
-		52851857147282E8009E8BD6 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E2146C761C000973C1 /* StringHelper.m */; };
-		52851858147282E8009E8BD6 /* UrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E4146C761C000973C1 /* UrlHelper.m */; };
-		52851859147282E8009E8BD6 /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D0146C7550000973C1 /* LiveConnectClient.m */; };
-		5285185A147282E8009E8BD6 /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D2146C7550000973C1 /* LiveConnectSession.m */; };
-		5285185B147282E8009E8BD6 /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D4146C7550000973C1 /* LiveDownloadOperation.m */; };
-		5285185C147282E8009E8BD6 /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
+		52851850147282E8009E8BD6 /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB712146F5809000973C1 /* LiveAuthRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851851147282E8009E8BD6 /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851852147282E8009E8BD6 /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EC146C7A39000973C1 /* LiveOperationCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851854147282E8009E8BD6 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175B1471FFFE009E8BD6 /* JsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851855147282E8009E8BD6 /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175D1471FFFF009E8BD6 /* JsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851856147282E8009E8BD6 /* LiveAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6FC146E36CA000973C1 /* LiveAuthHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851857147282E8009E8BD6 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E2146C761C000973C1 /* StringHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851858147282E8009E8BD6 /* UrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E4146C761C000973C1 /* UrlHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52851859147282E8009E8BD6 /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D0146C7550000973C1 /* LiveConnectClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5285185A147282E8009E8BD6 /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D2146C7550000973C1 /* LiveConnectSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5285185B147282E8009E8BD6 /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D4146C7550000973C1 /* LiveDownloadOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5285185C147282E8009E8BD6 /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5285185E147282F8009E8BD6 /* LiveAuthDialog_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529DB6F8146DFAC1000973C1 /* LiveAuthDialog_iPhone.xib */; settings = {ATTRIBUTES = (Public, ); }; };
 		528518A91473BF59009E8BD6 /* LiveConnectSessionStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 528518A61473BE78009E8BD6 /* LiveConnectSessionStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5297DDDE145E102B005B463E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5297DDDD145E102B005B463E /* UIKit.framework */; };
@@ -106,30 +106,30 @@
 		5299273F14BE3A3F0075376C /* LiveSDK_framework-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5299273D14BE3A3F0075376C /* LiveSDK_framework-Info.plist */; };
 		5299274314BE3A790075376C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5299274114BE3A790075376C /* InfoPlist.strings */; };
 		529AD7A4159D8CD3004A195B /* LiveUploadOverwriteOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 5297B269159A51F400ABFB6A /* LiveUploadOverwriteOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		529DB6DC146C7550000973C1 /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D0146C7550000973C1 /* LiveConnectClient.m */; };
-		529DB6DD146C7550000973C1 /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D2146C7550000973C1 /* LiveConnectSession.m */; };
-		529DB6DE146C7550000973C1 /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D4146C7550000973C1 /* LiveDownloadOperation.m */; };
-		529DB6DF146C7550000973C1 /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
-		529DB6E5146C761C000973C1 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E2146C761C000973C1 /* StringHelper.m */; };
-		529DB6E6146C761C000973C1 /* UrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E4146C761C000973C1 /* UrlHelper.m */; };
-		529DB6ED146C7A39000973C1 /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EC146C7A39000973C1 /* LiveOperationCore.m */; };
-		529DB6F0146C7AEE000973C1 /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */; };
+		529DB6DC146C7550000973C1 /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D0146C7550000973C1 /* LiveConnectClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6DD146C7550000973C1 /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D2146C7550000973C1 /* LiveConnectSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6DE146C7550000973C1 /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D4146C7550000973C1 /* LiveDownloadOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6DF146C7550000973C1 /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6E5146C761C000973C1 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E2146C761C000973C1 /* StringHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6E6146C761C000973C1 /* UrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E4146C761C000973C1 /* UrlHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6ED146C7A39000973C1 /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EC146C7A39000973C1 /* LiveOperationCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB6F0146C7AEE000973C1 /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		529DB6FA146DFAC1000973C1 /* LiveAuthDialog_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529DB6F8146DFAC1000973C1 /* LiveAuthDialog_iPhone.xib */; };
-		529DB6FD146E36CA000973C1 /* LiveAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6FC146E36CA000973C1 /* LiveAuthHelper.m */; };
-		529DB713146F580A000973C1 /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB712146F5809000973C1 /* LiveAuthRequest.m */; };
-		52A497E6149F16A50034BE79 /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C47500149B24F1007E646F /* LiveConnectionHelper.m */; };
+		529DB6FD146E36CA000973C1 /* LiveAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6FC146E36CA000973C1 /* LiveAuthHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		529DB713146F580A000973C1 /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB712146F5809000973C1 /* LiveAuthRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52A497E6149F16A50034BE79 /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C47500149B24F1007E646F /* LiveConnectionHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52A497E8149F174D0034BE79 /* backArrow_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C474EE1499E7F0007E646F /* backArrow_black.png */; };
 		52A497E9149F178D0034BE79 /* LiveConnectionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C474FF149B24F1007E646F /* LiveConnectionHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		52A497EA149F178D0034BE79 /* LiveConnectionCreatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C47502149B2E40007E646F /* LiveConnectionCreatorDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		52AB74BC148D5549004FC55A /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB74BB148D5548004FC55A /* StreamReader.m */; };
-		52B4944D1487625C001EA573 /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
-		52B494531488BDF7001EA573 /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B494521488BDF5001EA573 /* LiveDownloadOperationCore.m */; };
-		52B4946F148B7D6B001EA573 /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4946E148B7D67001EA573 /* LiveUploadOperationCore.m */; };
-		52B54AE614909F19001E1E17 /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AE514909F16001E1E17 /* LiveAuthStorage.m */; };
+		52AB74BC148D5549004FC55A /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB74BB148D5548004FC55A /* StreamReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52B4944D1487625C001EA573 /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52B494531488BDF7001EA573 /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B494521488BDF5001EA573 /* LiveDownloadOperationCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52B4946F148B7D6B001EA573 /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4946E148B7D67001EA573 /* LiveUploadOperationCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52B54AE614909F19001E1E17 /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AE514909F16001E1E17 /* LiveAuthStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52B54AEC1491074E001E1E17 /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AE514909F16001E1E17 /* LiveAuthStorage.m */; };
-		52B54AEF14912DBA001E1E17 /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AEE14912DB8001E1E17 /* LiveAuthRefreshRequest.m */; };
+		52B54AEF14912DBA001E1E17 /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AEE14912DB8001E1E17 /* LiveAuthRefreshRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52C474F51499E7F0007E646F /* backArrow_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C474EE1499E7F0007E646F /* backArrow_black.png */; };
-		52C47501149B24F1007E646F /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C47500149B24F1007E646F /* LiveConnectionHelper.m */; };
+		52C47501149B24F1007E646F /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C47500149B24F1007E646F /* LiveConnectionHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52C4750B149B38D1007E646F /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AEE14912DB8001E1E17 /* LiveAuthRefreshRequest.m */; };
 		52C4750C149B38D1007E646F /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB712146F5809000973C1 /* LiveAuthRequest.m */; };
 		52C4750D149B38D1007E646F /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */; };
@@ -142,15 +142,15 @@
 		52C47514149B38D1007E646F /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
 		52C47515149B38D1007E646F /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
 		52C47518149B390F007E646F /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; };
-		52D8231D1506E7F2000EF08F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D8231C1506E7F2000EF08F /* main.m */; };
+		52D8231D1506E7F2000EF08F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D8231C1506E7F2000EF08F /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52D8231F1506E81C000EF08F /* volvo_c70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52D8231E1506E81C000EF08F /* volvo_c70.jpg */; };
-		52D823231506E836000EF08F /* LiveServiceViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D823211506E836000EF08F /* LiveServiceViewController_iPad.m */; };
+		52D823231506E836000EF08F /* LiveServiceViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D823211506E836000EF08F /* LiveServiceViewController_iPad.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52D823241506E836000EF08F /* LiveServiceViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D823221506E836000EF08F /* LiveServiceViewController_iPad.xib */; };
-		52D823281506E856000EF08F /* LiveServiceViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D823261506E856000EF08F /* LiveServiceViewController_iPhone.m */; };
+		52D823281506E856000EF08F /* LiveServiceViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D823261506E856000EF08F /* LiveServiceViewController_iPhone.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52D823291506E856000EF08F /* LiveServiceViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D823271506E856000EF08F /* LiveServiceViewController_iPhone.xib */; };
-		52D8232E1506E876000EF08F /* LiveAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D8232B1506E876000EF08F /* LiveAppDelegate.m */; };
-		52D8232F1506E876000EF08F /* LiveServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D8232D1506E876000EF08F /* LiveServiceViewController.m */; };
-		52F76E91147A308500DA0A46 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; };
+		52D8232E1506E876000EF08F /* LiveAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D8232B1506E876000EF08F /* LiveAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52D8232F1506E876000EF08F /* LiveServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D8232D1506E876000EF08F /* LiveServiceViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52F76E91147A308500DA0A46 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		52F76E96147A3FA500DA0A46 /* LiveAuthDialog_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F76E94147A3FA500DA0A46 /* LiveAuthDialog_iPad.xib */; };
 /* End PBXBuildFile section */
 
@@ -909,6 +909,7 @@
 		5285183814727FE7009E8BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -931,6 +932,7 @@
 		5285183914727FE7009E8BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -955,6 +957,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -992,6 +995,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
