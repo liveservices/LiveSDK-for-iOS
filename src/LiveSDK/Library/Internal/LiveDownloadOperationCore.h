@@ -22,14 +22,20 @@
 #import "LiveDownloadOperationDelegate.h"
 
 @interface LiveDownloadOperationCore : LiveOperationCore
-{
-@private
-    NSUInteger contentLength;
-}
 
 - (id) initWithPath:(NSString *)path
+    destinationPath:(NSString *)destinationPath
            delegate:(id <LiveDownloadOperationDelegate>)delegate
           userState:(id)userState
          liveClient:(LiveConnectClientCore *)liveClient;
+
+// The destination path to where the file will be saved after downloading
+@property (nonatomic, strong, readonly) NSString *destinationDownloadPath;
+
+// The destination path to where the file will be saved after downloading
+@property (nonatomic, assign, readonly) unsigned long long downloadedBytes;
+
+// The expected content length. If there's no Content-Length specified, this could be -1
+@property (nonatomic, assign, readonly) long long expectedContentLength;
 
 @end

@@ -24,7 +24,16 @@
 // LiveDownloadOperation class represents an operation of downloading a file from the user's SkyDrive account.
 @interface LiveDownloadOperation : LiveOperation
 
-// The NSData instance that contains the downloaded data.
-@property (nonatomic, readonly) NSData *data;
+// The path to the temporary file where we are downloading to, which can be used to track progress
+@property (nonatomic, strong, readonly) NSString *temporaryPath;
+
+// The destination path to where the file will be saved after downloading
+@property (nonatomic, strong, readonly) NSString *destinationDownloadPath;
+
+// The destination path to where the file will be saved after downloading
+@property (nonatomic, assign, readonly) unsigned long long downloadedBytes;
+
+// The expected content length. If there's no Content-Length specified, this could be -1
+@property (nonatomic, assign, readonly) long long expectedContentLength;
 
 @end

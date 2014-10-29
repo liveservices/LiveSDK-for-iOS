@@ -80,6 +80,7 @@
                                 userState:(id) userState;
 
 - (LiveDownloadOperation *) downloadFromPath:(NSString *)path
+                             destinationPath:(NSString *)destinationPath
                                     delegate:(id <LiveDownloadOperationDelegate>)delegate
                                    userState:(id)userState;
 

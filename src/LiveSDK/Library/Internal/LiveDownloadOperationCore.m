@@ -22,12 +22,25 @@
 #import "LiveDownloadOperationInternal.h"
 #import "LiveOperationInternal.h"
 #import "LiveOperationProgress.h"
+#import "LiveConstants.h"
 
 @class LiveDownloadOperation;
+
+@interface LiveDownloadOperationCore ()
+{
+    unsigned long long _downloadedBytes;
+    long long _expectedContentLength;
+}
+
+@property (nonatomic, strong, readwrite) NSString *destinationDownloadPath;
+@property (nonatomic, strong) NSFileHandle *outputFileHandle;
+
+@end
 
 @implementation LiveDownloadOperationCore
 
 - (id) initWithPath:(NSString *)path
+    destinationPath:(NSString *)destinationPath
            delegate:(id <LiveDownloadOperationDelegate>)delegate
           userState:(id)userState
          liveClient:(LiveConnectClientCore *)liveClient
@@ -40,13 +53,55 @@
                       liveClient:liveClient];
     if (self)
     {
-        contentLength = 0;
+        self.destinationDownloadPath = destinationPath;
     }
     
     return self;
 }
 
+- (unsigned long long)downloadedBytes
+{
+    return _downloadedBytes;
+}
+
+- (long long)expectedContentLength
+{
+    return _expectedContentLength;
+}
+
 #pragma mark override methods
+
+- (void)execute
+{
+    NSError *fileTruncationError = nil;
+
+    [[[NSData alloc] init] writeToFile:self.destinationDownloadPath options:0 error:&fileTruncationError];
+    
+    if (fileTruncationError)
+    {
+        [self operationFailed:fileTruncationError];
+    }
+    else
+    {
+        self.outputFileHandle = [NSFileHandle fileHandleForWritingAtPath:self.destinationDownloadPath];
+        
+        _downloadedBytes = 0;
+        _expectedContentLength = 0;
+        
+        [super execute];
+    }
+}
+
+- (void)cancel
+{
+    [super cancel];
+    
+    if (self.outputFileHandle)
+    {
+        [self.outputFileHandle closeFile];
+        self.outputFileHandle = nil;
+    }
+}
 
 - (NSURL *)requestUrl
 {
@@ -67,6 +122,9 @@
         return;
     }
     
+    [self.outputFileHandle closeFile];
+    self.outputFileHandle = nil;
+    
     if (self.httpError) 
     {
         // If there is httpError, try read the error information from the server.
@@ -83,7 +141,7 @@
     }
     else 
     {
-        if ([self.delegate respondsToSelector:@selector(liveOperationSucceeded:)]) 
+        if ([self.delegate respondsToSelector:@selector(liveOperationSucceeded:)])
         {
             [self.delegate liveOperationSucceeded:self.publicOperation];
         }
@@ -99,24 +157,65 @@
 
 - (void) operationReceivedData:(NSData *)data
 {
-    [self.responseData appendData:data];
-    
-    if ([self.delegate respondsToSelector:@selector(liveDownloadOperationProgressed:data:operation:)])
+    @try
     {
-        if (contentLength == 0)
+        [self.outputFileHandle writeData:data];
+    }
+    @catch (NSException *exception)
+    {
+        [self cancel];
+        
+        NSMutableDictionary *userInfo = [exception.userInfo mutableCopy];
+        userInfo[NSLocalizedFailureReasonErrorKey] = exception.reason;
+        
+        NSError *error = [NSError errorWithDomain:LIVE_ERROR_DOMAIN
+                                             code:0
+                                         userInfo:userInfo];
+        [self operationFailed:error];
+        
+        return;
+    }
+    @finally
+    {
+        
+    }
+    
+    _downloadedBytes += (unsigned long long)data.length;
+    
+    if ([self.delegate respondsToSelector:@selector(liveDownloadOperationProgressed:operation:)])
+    {
+        if (_expectedContentLength == 0)
         {
-            contentLength = [[self.httpResponse.allHeaderFields valueForKey:@"Content-Length"] intValue];
+            NSString *field = [self.httpResponse.allHeaderFields valueForKey:@"Content-Length"];
+            if (field)
+            {
+                _expectedContentLength = [field longLongValue];
+            }
+            else
+            {
+                _expectedContentLength = -1ULL;
+            }
         }
         
         LiveOperationProgress *progress = [[[LiveOperationProgress alloc] 
-                                            initWithBytesTransferred:self.responseData.length 
-                                                          totalBytes:contentLength]
+                                            initWithBytesTransferred:(NSUInteger)_downloadedBytes
+                                                          totalBytes:(NSUInteger)_expectedContentLength]
                                            autorelease];
         
-        [self.delegate liveDownloadOperationProgressed:progress 
-                                                  data:data 
+        [self.delegate liveDownloadOperationProgressed:progress
                                              operation:self.publicOperation];
     }
+}
+
+- (void) operationFailed:(NSError *)error
+{
+    if (!self.completed && self.outputFileHandle)
+    {
+        [self.outputFileHandle closeFile];
+        self.outputFileHandle = nil;
+    }
+    
+    [super operationFailed:error];
 }
 
 @end

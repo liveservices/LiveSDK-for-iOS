@@ -345,8 +345,12 @@ static NSString * const CLIENT_ID = @"000000004808C307"; //@"%CLIENT_ID%";
 {
     @try 
     {
-        [self.liveClient downloadFromPath:self.pathTextField.text 
-                                 delegate:self 
+        NSString *tempPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", [[NSProcessInfo processInfo] globallyUniqueString]]];
+        
+        [self.liveClient downloadFromPath:self.pathTextField.text
+                          destinationPath:tempPath
+                                overwrite:YES
+                                 delegate:self
                                 userState:@"download"];
     }
     @catch (id ex) 
@@ -399,7 +403,7 @@ static NSString * const CLIENT_ID = @"000000004808C307"; //@"%CLIENT_ID%";
     if ([operation.userState isEqual:@"download"]) 
     {
         LiveDownloadOperation *downloadOp = (LiveDownloadOperation *)operation;
-        self.imgView.image = [UIImage imageWithData:downloadOp.data];
+        self.imgView.image = [UIImage imageWithContentsOfFile:downloadOp.destinationDownloadPath];
         
     }
 }
