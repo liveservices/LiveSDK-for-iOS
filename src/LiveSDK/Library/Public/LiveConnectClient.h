@@ -60,6 +60,9 @@
 //         the server will reject to send back authentication session data.
 // - userState: Optional. An object that is used to track asynchronous state. The userState object will 
 //         be passed as userState parameter when any LiveAuthDelegate protocol method is invoked.
+//
+// If initManuallyWithClientId: is sent, then the authorization process will not start immediately,
+// and you have to send refreshSessionWithDelegate:refreshtoken:userState: in order to start the process of validating the token.
 
 - (id) initWithClientId:(NSString *)clientId
                delegate:(id<LiveAuthDelegate>)delegate;
@@ -76,6 +79,18 @@
                  scopes:(NSArray *)scopes
                delegate:(id<LiveAuthDelegate>)delegate
               userState:(id)userState;
+
+- (id) initManuallyWithClientId:(NSString *)clientId
+                         scopes:(NSArray *)scopes
+                       delegate:(id<LiveAuthDelegate>)delegate;
+
+#pragma mark - refresh* methods
+
+- (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
+                       refreshToken:(NSString *)refreshToken
+                          userState:(id)userState;
+
+- (NSString *) refreshToken;
 
 #pragma mark - login* methods
 

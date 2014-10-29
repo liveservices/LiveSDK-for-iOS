@@ -92,11 +92,40 @@
     return self;
 }
 
+- (id) initManuallyWithClientId:(NSString *)clientId
+                         scopes:(NSArray *)scopes
+                       delegate:(id<LiveAuthDelegate>)delegate
+{
+    self = [super init];
+    if (self)
+    {
+        _liveClientCore = [[LiveConnectClientCore alloc] initWithClientId:clientId
+                                                                   scopes:[LiveAuthHelper normalizeScopes:scopes]
+                                                                 delegate:delegate];
+    }
+    
+    return self;
+}
+
 - (void)dealloc
 {
     [_liveClientCore release];
     
     [super dealloc];
+}
+
+#pragma mark Refresh stuff
+
+- (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
+                       refreshToken:(NSString *)refreshToken
+                          userState:(id)userState
+{
+    [_liveClientCore refreshSessionWithDelegate:delegate refreshToken:refreshToken userState:userState];
+}
+
+- (NSString *) refreshToken
+{
+    return self.session.refreshToken;
 }
 
 #pragma mark Parameter validation
