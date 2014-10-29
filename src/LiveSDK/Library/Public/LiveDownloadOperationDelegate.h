@@ -36,7 +36,6 @@
 
 // This is invoked when there is a download progress event raised.
 - (void) liveDownloadOperationProgressed:(LiveOperationProgress *)progress
-                                    data:(NSData *)receivedData
                                operation:(LiveDownloadOperation *)operation;
 
 
