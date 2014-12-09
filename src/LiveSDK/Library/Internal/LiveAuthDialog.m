@@ -89,7 +89,9 @@
     
     //Load the Url request in the UIWebView.
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:_startUrl];
-    [webView loadRequest:requestObj];    
+    [webView loadRequest:requestObj];
+    
+    [_delegate authDialogLoaded];
 }
 
 - (void) viewDidAppear:(BOOL)animated
