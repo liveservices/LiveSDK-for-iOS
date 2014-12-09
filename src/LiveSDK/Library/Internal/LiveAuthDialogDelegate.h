@@ -21,6 +21,8 @@
 
 @protocol LiveAuthDialogDelegate <NSObject>
 
+- (void) authDialogLoaded;
+
 - (void) authDialogCompletedWithResponse:(NSURL *)responseUrl;
 
 - (void) authDialogFailedWithError:(NSError *)error;

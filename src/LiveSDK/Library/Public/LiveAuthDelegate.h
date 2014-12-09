@@ -18,6 +18,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "LiveConnectSession.h"
 #import "LiveConnectSessionStatus.h"
 
@@ -37,5 +38,7 @@
 // This is invoked when the original method call fails.
 - (void) authFailed: (NSError *) error
           userState: (id)userState;
+
+- (void) authViewControllerLoaded: (UIViewController *) authViewController;
 
 @end
