@@ -55,6 +55,24 @@
     return self;
 }
 
+
+- (id) initWithClientId:(NSString *)clientId
+                 scopes:(NSArray *)scopes
+               delegate:(id<LiveAuthDelegate>)delegate
+{
+    self = [super init];
+    if (self)
+    {
+        _clientId = [clientId copy];
+        _scopes = [scopes copy];
+        _storage = nil; // Let the developer choose whether they want to save the refreshToken, where and when.
+        _status = LiveAuthUnknown;
+        _session = nil;
+    }
+    
+    return self;
+}
+
 - (void)dealloc
 {
     [authRefreshRequest cancel];
@@ -138,19 +156,26 @@
         _status = LiveAuthConnected;
     }
     
-    // By the time we update the session, we persist the refreshToken.
+    // By the time we update the session, we persist the refreshToken - that is if the developer has chosen to use storage.
     _storage.refreshToken = session.refreshToken;
 }
 
 - (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
                           userState:(id)userState
 {
-    if ([LiveAuthHelper shouldRefreshToken:_session 
-                              refreshToken:_storage.refreshToken]) 
+    [self refreshSessionWithDelegate:delegate refreshToken:_storage.refreshToken userState:userState];
+}
+
+- (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
+                       refreshToken:(NSString *)refreshToken
+                          userState:(id)userState
+{
+    if ([LiveAuthHelper shouldRefreshToken:_session
+                              refreshToken:refreshToken])
     {
         authRefreshRequest = [[[LiveAuthRefreshRequest alloc] initWithClientId:_clientId
                                                                          scope:_scopes
-                                                                  refreshToken:_storage.refreshToken
+                                                                  refreshToken:refreshToken
                                                                       delegate:delegate
                                                                      userState:userState
                                                                     clientStub:self]
@@ -160,11 +185,11 @@
     }
     else
     {
-        if ([delegate respondsToSelector:@selector(authCompleted:session:userState:)]) 
+        if ([delegate respondsToSelector:@selector(authCompleted:session:userState:)])
         {
             NSArray *authCompletedEvent = [NSArray arrayWithObjects:delegate, userState, nil];
-            [self performSelector:@selector(sendAuthCompletedMessage:) 
-                       withObject:authCompletedEvent 
+            [self performSelector:@selector(sendAuthCompletedMessage:)
+                       withObject:authCompletedEvent
                        afterDelay:0.1];
         }
     }
@@ -192,12 +217,14 @@
 }
 
 - (LiveDownloadOperation *) downloadFromPath:(NSString *)path
+                             destinationPath:(NSString *)destinationPath
                                     delegate:(id <LiveDownloadOperationDelegate>)delegate
                                    userState:(id)userState
 {
-    LiveDownloadOperationCore *operation = [[[LiveDownloadOperationCore alloc] initWithPath:path 
+    LiveDownloadOperationCore *operation = [[[LiveDownloadOperationCore alloc] initWithPath:path
+                                                                            destinationPath:destinationPath
                                                                                    delegate:delegate
-                                                                                  userState:userState 
+                                                                                  userState:userState
                                                                                  liveClient:self]
                                             autorelease];
     [operation execute];

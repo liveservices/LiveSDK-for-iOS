@@ -92,11 +92,40 @@
     return self;
 }
 
+- (id) initManuallyWithClientId:(NSString *)clientId
+                         scopes:(NSArray *)scopes
+                       delegate:(id<LiveAuthDelegate>)delegate
+{
+    self = [super init];
+    if (self)
+    {
+        _liveClientCore = [[LiveConnectClientCore alloc] initWithClientId:clientId
+                                                                   scopes:[LiveAuthHelper normalizeScopes:scopes]
+                                                                 delegate:delegate];
+    }
+    
+    return self;
+}
+
 - (void)dealloc
 {
     [_liveClientCore release];
     
     [super dealloc];
+}
+
+#pragma mark Refresh stuff
+
+- (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
+                       refreshToken:(NSString *)refreshToken
+                          userState:(id)userState
+{
+    [_liveClientCore refreshSessionWithDelegate:delegate refreshToken:refreshToken userState:userState];
+}
+
+- (NSString *) refreshToken
+{
+    return self.session.refreshToken;
 }
 
 #pragma mark Parameter validation
@@ -167,6 +196,12 @@
 {
     [self validateInit];
     return _liveClientCore.session;
+}
+
+- (void)setSession:(LiveConnectSession *) session
+{
+    [self validateInit];
+    _liveClientCore.session = session;
 }
 
 - (void) login:(UIViewController *) currentViewController
@@ -453,12 +488,14 @@
 }
 
 - (LiveDownloadOperation *) downloadFromPath:(NSString *)path
+                             destinationPath:(NSString *)destinationPath
                                     delegate:(id <LiveDownloadOperationDelegate>)delegate
 {
-    return [self downloadFromPath:path delegate:delegate userState:nil];
+    return [self downloadFromPath:path destinationPath:destinationPath delegate:delegate userState:nil];
 }
 
 - (LiveDownloadOperation *) downloadFromPath:(NSString *)path
+                             destinationPath:(NSString *)destinationPath
                                     delegate:(id <LiveDownloadOperationDelegate>)delegate
                                    userState:(id)userState
 {
@@ -466,10 +503,11 @@
     [self validatePath:path
             methodName:@"downloadFromPath:delegate:userState:"
               relative:NO];
-
     
-    return [_liveClientCore downloadFromPath:path 
-                                    delegate:delegate 
+    
+    return [_liveClientCore downloadFromPath:path
+                             destinationPath:destinationPath
+                                    delegate:delegate
                                    userState:userState];
 }
 

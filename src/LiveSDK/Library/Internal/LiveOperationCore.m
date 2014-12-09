@@ -236,6 +236,7 @@
     }
     
     completed = YES;
+    
     if ([_delegate respondsToSelector:@selector(liveOperationFailed:operation:)]) 
     {
         [_delegate liveOperationFailed:error operation:publicOperation];
