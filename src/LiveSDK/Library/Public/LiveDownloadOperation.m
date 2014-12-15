@@ -22,22 +22,28 @@
 
 @implementation LiveDownloadOperation
 
-@synthesize data;
-
-- (id) initWithOpCore:(LiveDownloadOperationCore *)opCore
+- (id)initWithOpCore:(LiveDownloadOperationCore *)opCore
 {
     return [super initWithOpCore:opCore];
 }
 
-- (NSData *)data
+- (NSString *)destinationDownloadPath
 {
-    return self.liveOpCore.responseData;
+    return ((LiveDownloadOperationCore*)self.liveOpCore).destinationDownloadPath;
+}
+
+- (unsigned long long)downloadedBytes
+{
+    return ((LiveDownloadOperationCore*)self.liveOpCore).downloadedBytes;
+}
+
+- (long long)expectedContentLength
+{
+    return ((LiveDownloadOperationCore*)self.liveOpCore).expectedContentLength;
 }
 
 - (void)dealloc 
 {
-    [data release];
-    
     [super dealloc];
 }
 
