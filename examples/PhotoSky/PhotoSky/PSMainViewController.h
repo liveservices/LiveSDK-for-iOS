@@ -18,7 +18,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LiveSDK/LiveConnectClient.h"
+#import <LiveSDK/LiveConnectClient.h>
 
 @interface PSMainViewController : UIViewController<LiveAuthDelegate, LiveOperationDelegate>
 {
