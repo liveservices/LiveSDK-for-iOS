@@ -23,7 +23,7 @@ You can reference the iOS API in two ways.
 ###2.1 Install with Cocoapods
 
 * [Install cocoapods](http://guides.cocoapods.org/using/getting-started.html) following the getting started guide.
-* Add the following to your Podfile: `pod 'LiveSDK', :git => 'https://github.com/OneDrive/LiveSDK-for-iOS.git'`
+* Add the following to your Podfile: `pod 'LiveSDK', :git => 'https://github.com/liveservices/LiveSDK-for-iOS.git'`
 * Run the command `pod install` to install the latest LiveSDK pod.
 
 ###2.2 To reference the iOS API source code directly
