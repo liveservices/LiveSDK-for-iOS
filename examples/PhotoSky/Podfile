@@ -3,7 +3,7 @@
 
 target 'PhotoSky' do
 
-pod 'LiveSDK', :git => 'https://github.com/liveservices/LiveSDK-for-iOS.git'
+pod 'LiveSDK'
 
 end
 
