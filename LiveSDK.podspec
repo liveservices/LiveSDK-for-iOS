@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LiveSDK"
-  s.version      = "5.6.0"
+  s.version      = "5.6.1"
   s.summary      = "Client libraries for calling Live Services from iOS apps"
   s.description  = <<-DESC
                    Client libraries for calling the Live Services from iOS apps. Provides
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "5.1.1"
   s.compiler_flags = "-DNS_BLOCK_ASSERTIONS=1"
 
-  s.source       = { :git => "https://github.com/rgregg/LiveSDK-for-iOS.git",
+  s.source       = { :git => "https://github.com/liveservices/LiveSDK-for-iOS.git",
                      :tag => "#{s.version}" }
 
   s.source_files  = "src/LiveSDK/**/*.{h,m}"
@@ -26,5 +26,5 @@ Pod::Spec.new do |s|
   s.resources = "src/LiveSDK/Library/Internal/Resources/*.png",
   				"src/LiveSDK/Library/Internal/*.xib"
   s.requires_arc = false
-  
+
 end
