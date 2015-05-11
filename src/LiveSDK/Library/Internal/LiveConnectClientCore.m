@@ -31,6 +31,7 @@
 #import "LiveUploadOperationCore.h"
 #import "StringHelper.h"
 
+
 @implementation LiveConnectClientCore
 
 @synthesize clientId = _clientId,
@@ -38,7 +39,8 @@
              session = _session,
               status = _status,
          authRequest = _authRequest,
-  authRefreshRequest;
+  authRefreshRequest = _authRefreshRequest;
+
 
 #pragma mark init and dealloc
 
@@ -55,6 +57,7 @@
         _storage = [[LiveAuthStorage alloc] initWithClientId:clientId];            
         _status = LiveAuthUnknown;
         _session = nil;
+        _authRefreshRequest = nil;
     }
     
     [self refreshSessionWithDelegate:delegate
@@ -64,14 +67,18 @@
 
 - (void)dealloc
 {
-    [authRefreshRequest cancel];
+    // Unfortunetly we must cancel the authRefreshRequest before we dealloc it
+    // so it does not call any of the delegate methods on a delegate that has been
+    // dealloced. when we set the authRefreshRequest to nil it will be autoreleased
+    [self.authRefreshRequest cancel];
+    self.authRefreshRequest = nil;
+    
     
     [_clientId release];
     [_scopes release];
     [_session release];
     [_authRequest release];
     [_storage release];
-    [authRefreshRequest release];
     
     [super dealloc];
 }
@@ -155,15 +162,14 @@
     if ([LiveAuthHelper shouldRefreshToken:_session 
                               refreshToken:_storage.refreshToken]) 
     {
-        authRefreshRequest = [[[LiveAuthRefreshRequest alloc] initWithClientId:_clientId
+        self.authRefreshRequest = [[[LiveAuthRefreshRequest alloc] initWithClientId:_clientId
                                                                          scope:_scopes
                                                                   refreshToken:_storage.refreshToken
                                                                       delegate:delegate
                                                                      userState:userState
-                                                                    clientStub:self]
-                              autorelease];
+                                                                         clientStub:self] autorelease];
         
-        [authRefreshRequest execute];
+        [self.authRefreshRequest execute];
     }
     else
     {

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LiveSDK"
-  s.version      = "5.6.1"
+  s.version      = "5.6.2"
   s.summary      = "Client libraries for calling Live Services from iOS apps"
   s.description  = <<-DESC
                    Client libraries for calling the Live Services from iOS apps. Provides

@@ -45,7 +45,7 @@
         // Find the file path
         NSString *libDirectory = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         _filePath = [[libDirectory stringByAppendingPathComponent:@"LiveService_auth.plist"] retain];
-        _clientId = clientId;
+        _clientId = [clientId retain];
         
         // If file exist, load the file
         if ([[NSFileManager defaultManager] fileExistsAtPath:_filePath])
