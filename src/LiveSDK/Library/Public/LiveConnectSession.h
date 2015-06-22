@@ -52,7 +52,7 @@
 // An NSDate instance indicating when the session expires.
 @property (nonatomic, readonly) NSDate *expires;
 
-// User Id - DCD edited
+// The user ID of the account used in the session.
 @property (nonatomic, readonly) NSString *userId;
 
 @end

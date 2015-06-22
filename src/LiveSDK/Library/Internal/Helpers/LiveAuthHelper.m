@@ -190,8 +190,7 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
         NSString *refreshToken = [params valueForKey: LIVE_AUTH_REFRESH_TOKEN];
         NSArray *scopes = [[params valueForKey:LIVE_AUTH_SCOPE] componentsSeparatedByString:@" "]; 
         NSString *expiresInStr = [params valueForKey:LIVE_AUTH_EXPIRES_IN];
-        NSString *userId = [params valueForKey:LIVE_AUTH_USER_ID]; // DCD edited
-        NSTimeInterval expiresIn = [expiresInStr doubleValue];
+        NSString *userId = [params valueForKey:LIVE_AUTH_USER_ID];        NSTimeInterval expiresIn = [expiresInStr doubleValue];
         NSDate *expires = [NSDate dateWithTimeIntervalSinceNow:expiresIn];
         
         LiveConnectSession *session = [[[LiveConnectSession alloc] initWithAccessToken:accessToken 
