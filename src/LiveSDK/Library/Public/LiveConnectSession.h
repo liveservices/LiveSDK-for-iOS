@@ -34,7 +34,8 @@
        authenticationToken:(NSString *)authenticationToken
               refreshToken:(NSString *)refreshToken
                     scopes:(NSArray *)scopes
-                   expires:(NSDate *)expires;
+                   expires:(NSDate *)expires
+                    userId:(NSString *)userId;
 
 // The access token that is used when consuming Live Services REST API.
 @property (nonatomic, readonly) NSString *accessToken;
@@ -50,5 +51,8 @@
 
 // An NSDate instance indicating when the session expires.
 @property (nonatomic, readonly) NSDate *expires;
+
+// User Id - DCD edited
+@property (nonatomic, readonly) NSString *userId;
 
 @end

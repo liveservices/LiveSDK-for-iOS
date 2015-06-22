@@ -70,7 +70,8 @@
                                                                authenticationToken:@"authToken" 
                                                                       refreshToken:@"refreshToken" 
                                                                             scopes:[NSArray arrayWithObjects:@"wl.signin", nil]
-                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:19]]
+                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:19]
+                                                                            userId:@"userId"]
                                    autorelease];
     STAssertTrue([LiveAuthHelper shouldRefreshToken:session refreshToken:@"refreshToken" ], 
                   @"should refresh if it has less than 20 seconds before it expires.");
@@ -82,7 +83,8 @@
                                                                authenticationToken:@"authToken" 
                                                                       refreshToken:@" " 
                                                                             scopes:[NSArray arrayWithObjects:@"wl.signin", nil]
-                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:210]]
+                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:210]
+                                                                            userId:@"userId"]
                                    autorelease];
     STAssertFalse([LiveAuthHelper shouldRefreshToken:session refreshToken: @" "], 
                   @"should not refresh if we don't have refresh token.");
@@ -94,7 +96,8 @@
                                                                authenticationToken:@"authToken" 
                                                                       refreshToken:nil 
                                                                             scopes:[NSArray arrayWithObjects:@"wl.signin", nil]
-                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:210]]
+                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:210]
+                                                                            userId:@"userId"]
                                    autorelease];
     STAssertFalse([LiveAuthHelper shouldRefreshToken:session refreshToken:nil], 
                   @"should not refresh if we don't have refresh token.");
@@ -106,7 +109,8 @@
                                                                authenticationToken:@"authToken" 
                                                                       refreshToken:@"refreshToken" 
                                                                             scopes:[NSArray arrayWithObjects:@"wl.signin", nil]
-                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:31]]
+                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:31]
+                                                                            userId:@"userId"]
                                    autorelease];
     STAssertFalse([LiveAuthHelper shouldRefreshToken:session refreshToken:@"refreshToken" ], 
                  @"should not refresh if it has more than 20 seconds before it expires.");
@@ -137,7 +141,8 @@
                                                                authenticationToken:@"authToken" 
                                                                       refreshToken:@"refreshToken" 
                                                                             scopes:[NSArray arrayWithObjects:@"wl.signin", nil]
-                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:4]]
+                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:4]
+                                                                            userId:@"userId"]
                                    autorelease];
     STAssertTrue([LiveAuthHelper isSessionValid:session], 
                  @"The token should be still valid, if it has 4 seconds before expire.");
@@ -149,7 +154,8 @@
                                                                authenticationToken:@"authToken" 
                                                                       refreshToken:@"refreshToken" 
                                                                             scopes:[NSArray arrayWithObjects:@"wl.signin", nil]
-                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:2]]
+                                                                           expires:[NSDate dateWithTimeIntervalSinceNow:2]
+                                                                            userId:@"userId"]
                                    autorelease];
     STAssertFalse([LiveAuthHelper isSessionValid:session], 
                  @"The token should be still invalid, if it has less than 3 seconds before expire.");

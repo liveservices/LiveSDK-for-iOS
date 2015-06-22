@@ -60,6 +60,7 @@ static NSString * const LIVE_AUTH_SCOPE = @"scope";
 static NSString * const LIVE_AUTH_THEME = @"theme";
 static NSString * const LIVE_AUTH_THEME_IOS = @"ios";
 static NSString * const LIVE_AUTH_TOKEN = @"token";
+static NSString * const LIVE_AUTH_USER_ID = @"user_id";
 
 static NSString * const LIVE_AUTH_POST_CONTENT_TYPE = @"application/x-www-form-urlencoded;charset=UTF-8";
 static NSString * const LIVE_AUTH_EXPIRES_IN = @"expires_in";

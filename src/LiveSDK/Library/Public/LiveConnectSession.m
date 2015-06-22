@@ -32,13 +32,15 @@
     authenticationToken = _authenticationToken,
            refreshToken = _refreshToken, 
                  scopes = _scopes, 
-                expires = _expires;
+                expires = _expires,
+                userId  = _userId;
 
 - (id) initWithAccessToken:(NSString *)accessToken
        authenticationToken:(NSString *)authenticationToken
               refreshToken:(NSString *)refreshToken
                     scopes:(NSArray *)scopes
                    expires:(NSDate *)expires
+                    userId:(NSString *)userId
 {
     self = [super init];
     if (self) 
@@ -48,6 +50,7 @@
         _refreshToken = [refreshToken retain];
         _scopes = [scopes retain];
         _expires = [expires retain];
+        _userId = [userId retain];
     }
     
     return self;
@@ -60,6 +63,7 @@
     [_refreshToken release];
     [_scopes release];
     [_expires release];
+    [_userId release];
     
     [super dealloc];
 }
