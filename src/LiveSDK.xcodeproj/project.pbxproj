@@ -97,6 +97,11 @@
 		52C47514149B38D1007E646F /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
 		52C47515149B38D1007E646F /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
 		52C47518149B390F007E646F /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; };
+		7455C6631B39FF5A008350C6 /* LiveInternalConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 7455C6611B39FF5A008350C6 /* LiveInternalConstants.h */; };
+		7455C6641B39FF5A008350C6 /* LiveInternalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455C6621B39FF5A008350C6 /* LiveInternalConstants.m */; };
+		7455C6651B39FF63008350C6 /* LiveInternalConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455C6621B39FF5A008350C6 /* LiveInternalConstants.m */; };
+		7455C6671B39FF71008350C6 /* LiveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455C6661B39FF71008350C6 /* LiveConstants.m */; };
+		7455C6681B39FF71008350C6 /* LiveConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7455C6661B39FF71008350C6 /* LiveConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +194,9 @@
 		52F76E8F147A308500DA0A46 /* LiveApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveApiHelper.h; path = LiveSDK/Library/Internal/Helpers/LiveApiHelper.h; sourceTree = SOURCE_ROOT; };
 		52F76E90147A308500DA0A46 /* LiveApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveApiHelper.m; path = LiveSDK/Library/Internal/Helpers/LiveApiHelper.m; sourceTree = SOURCE_ROOT; };
 		52F76E94147A3FA500DA0A46 /* LiveAuthDialog_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LiveAuthDialog_iPad.xib; path = Library/Internal/LiveAuthDialog_iPad.xib; sourceTree = "<group>"; };
+		7455C6611B39FF5A008350C6 /* LiveInternalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveInternalConstants.h; path = Library/Internal/LiveInternalConstants.h; sourceTree = "<group>"; };
+		7455C6621B39FF5A008350C6 /* LiveInternalConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveInternalConstants.m; path = Library/Internal/LiveInternalConstants.m; sourceTree = "<group>"; };
+		7455C6661B39FF71008350C6 /* LiveConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveConstants.m; path = Library/Internal/LiveConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +370,8 @@
 				529DB6D1146C7550000973C1 /* LiveConnectSession.h */,
 				529DB6D2146C7550000973C1 /* LiveConnectSession.m */,
 				528518A61473BE78009E8BD6 /* LiveConnectSessionStatus.h */,
+				529DB6E7146C7645000973C1 /* LiveConstants.h */,
+				7455C6661B39FF71008350C6 /* LiveConstants.m */,
 				529DB6D3146C7550000973C1 /* LiveDownloadOperation.h */,
 				529DB6D4146C7550000973C1 /* LiveDownloadOperation.m */,
 				529DB6D5146C7550000973C1 /* LiveDownloadOperationDelegate.h */,
@@ -392,7 +402,8 @@
 				529DB712146F5809000973C1 /* LiveAuthRequest.m */,
 				529DB6EE146C7AEE000973C1 /* LiveConnectClientCore.h */,
 				529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */,
-				529DB6E7146C7645000973C1 /* LiveConstants.h */,
+				7455C6611B39FF5A008350C6 /* LiveInternalConstants.h */,
+				7455C6621B39FF5A008350C6 /* LiveInternalConstants.m */,
 				52B494511488BDF4001EA573 /* LiveDownloadOperationCore.h */,
 				52B494521488BDF5001EA573 /* LiveDownloadOperationCore.m */,
 				52B4946B148B0FDF001EA573 /* LiveDownloadOperationInternal.h */,
@@ -435,6 +446,7 @@
 				5207541314987F440058A61E /* LiveAuthStorage.h in Headers */,
 				52851846147282C2009E8BD6 /* LiveConnectClientCore.h in Headers */,
 				52851848147282C2009E8BD6 /* LiveConstants.h in Headers */,
+				7455C6631B39FF5A008350C6 /* LiveInternalConstants.h in Headers */,
 				52A497E9149F178D0034BE79 /* LiveConnectionHelper.h in Headers */,
 				52A497EA149F178D0034BE79 /* LiveConnectionCreatorDelegate.h in Headers */,
 				5207541414987F440058A61E /* LiveDownloadOperationCore.h in Headers */,
@@ -567,7 +579,9 @@
 				52851850147282E8009E8BD6 /* LiveAuthRequest.m in Sources */,
 				52851851147282E8009E8BD6 /* LiveConnectClientCore.m in Sources */,
 				52851852147282E8009E8BD6 /* LiveOperationCore.m in Sources */,
+				7455C6641B39FF5A008350C6 /* LiveInternalConstants.m in Sources */,
 				52851854147282E8009E8BD6 /* JsonParser.m in Sources */,
+				7455C6681B39FF71008350C6 /* LiveConstants.m in Sources */,
 				52851855147282E8009E8BD6 /* JsonWriter.m in Sources */,
 				52851856147282E8009E8BD6 /* LiveAuthHelper.m in Sources */,
 				52851857147282E8009E8BD6 /* StringHelper.m in Sources */,
@@ -590,6 +604,7 @@
 				52C4750E149B38D1007E646F /* LiveDownloadOperationCore.m in Sources */,
 				52C4750F149B38D1007E646F /* LiveOperationCore.m in Sources */,
 				52C47510149B38D1007E646F /* LiveUploadOperationCore.m in Sources */,
+				7455C6671B39FF71008350C6 /* LiveConstants.m in Sources */,
 				52C47511149B38D1007E646F /* LiveConnectionHelper.m in Sources */,
 				52C47512149B38D1007E646F /* LiveConnectClient.m in Sources */,
 				52C47513149B38D1007E646F /* LiveDownloadOperation.m in Sources */,
@@ -611,6 +626,7 @@
 				52559D951506EC7100F0DF04 /* LiveConnectClientListener.m in Sources */,
 				52559D961506EC7100F0DF04 /* MockFactory.m in Sources */,
 				52559D971506EC7100F0DF04 /* MockResponse.m in Sources */,
+				7455C6651B39FF63008350C6 /* LiveInternalConstants.m in Sources */,
 				52559D981506EC7100F0DF04 /* MockUrlConnection.m in Sources */,
 				52559D991506EC7100F0DF04 /* StringHelperTests.m in Sources */,
 				52559D9A1506EC7100F0DF04 /* UrlHelperTests.m in Sources */,
