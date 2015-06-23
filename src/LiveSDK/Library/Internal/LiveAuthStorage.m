@@ -25,7 +25,7 @@
 
 
 #import "LiveAuthStorage.h"
-#import "LiveConstants.h"
+#import "LiveInternalConstants.h"
 
 @interface LiveAuthStorage()
 

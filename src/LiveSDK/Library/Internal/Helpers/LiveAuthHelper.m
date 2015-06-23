@@ -25,14 +25,12 @@
 
 #import <UIKit/UIKit.h>
 #import "LiveAuthHelper.h"
-#import "LiveConstants.h"
 #import "LiveConnectSession.h"
+#import "LiveConstants.h"
+#import "LiveInternalConstants.h"
 #import "JsonParser.h"
 #import "StringHelper.h"
 #import "UrlHelper.h"
-
-NSString * LIVE_ENDPOINT_API_HOST = @"apis.live.net";
-NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
 
 @implementation LiveAuthHelper
 
@@ -263,14 +261,6 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
         // We have refresh token but no access token, we should get one.
         return hasRefreshToken;
     }
-}
-
-+ (void) overrideLoginServer:(NSString *)loginServer
-                  apiServer:(NSString *)apiServer
-
-{
-    LIVE_ENDPOINT_LOGIN_HOST = loginServer;
-    LIVE_ENDPOINT_API_HOST = apiServer;
 }
 
 @end

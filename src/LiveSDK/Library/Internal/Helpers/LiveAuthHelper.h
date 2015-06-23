@@ -74,7 +74,4 @@
 + (BOOL) shouldRefreshToken:(LiveConnectSession *)session
                refreshToken:(NSString *)refreshToken;
 
-+ (void) overrideLoginServer:(NSString *)loginServer
-                   apiServer:(NSString *)apiServer;
-
 @end
