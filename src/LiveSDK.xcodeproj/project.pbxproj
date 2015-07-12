@@ -27,24 +27,6 @@
 		5210CF86149290E400C525F3 /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB74BB148D5548004FC55A /* StreamReader.m */; };
 		5210CF87149290E400C525F3 /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
 		5210CF881492912100C525F3 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; };
-		5210CF9D14954C0A00C525F3 /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F76E90147A308500DA0A46 /* LiveApiHelper.m */; };
-		5210CF9E14954C5300C525F3 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175B1471FFFE009E8BD6 /* JsonParser.m */; };
-		5210CF9F14954C5300C525F3 /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285175D1471FFFF009E8BD6 /* JsonWriter.m */; };
-		5210CFA014954C5300C525F3 /* LiveAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6FC146E36CA000973C1 /* LiveAuthHelper.m */; };
-		5210CFA114954C5300C525F3 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E2146C761C000973C1 /* StringHelper.m */; };
-		5210CFA214954C5300C525F3 /* UrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6E4146C761C000973C1 /* UrlHelper.m */; };
-		5210CFA314954C5300C525F3 /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB74BB148D5548004FC55A /* StreamReader.m */; };
-		5210CFA414954CA800C525F3 /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D2146C7550000973C1 /* LiveConnectSession.m */; };
-		52559D911506EC7100F0DF04 /* LiveAuthHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D6E1506EA7400F0DF04 /* LiveAuthHelperTests.m */; };
-		52559D921506EC7100F0DF04 /* LiveAuthStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D701506EA7400F0DF04 /* LiveAuthStorageTests.m */; };
-		52559D931506EC7100F0DF04 /* LiveConnectClientApiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D721506EA7400F0DF04 /* LiveConnectClientApiTests.m */; };
-		52559D941506EC7100F0DF04 /* LiveConnectClientAuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D741506EA7400F0DF04 /* LiveConnectClientAuthTests.m */; };
-		52559D951506EC7100F0DF04 /* LiveConnectClientListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D761506EA7400F0DF04 /* LiveConnectClientListener.m */; };
-		52559D961506EC7100F0DF04 /* MockFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D781506EA7400F0DF04 /* MockFactory.m */; };
-		52559D971506EC7100F0DF04 /* MockResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D7A1506EA7400F0DF04 /* MockResponse.m */; };
-		52559D981506EC7100F0DF04 /* MockUrlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D7C1506EA7400F0DF04 /* MockUrlConnection.m */; };
-		52559D991506EC7100F0DF04 /* StringHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D7E1506EA7400F0DF04 /* StringHelperTests.m */; };
-		52559D9A1506EC7100F0DF04 /* UrlHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52559D801506EA7400F0DF04 /* UrlHelperTests.m */; };
 		5285183B14728292009E8BD6 /* LiveAuthDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6CE146C7550000973C1 /* LiveAuthDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5285183C14728292009E8BD6 /* LiveConnectClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6CF146C7550000973C1 /* LiveConnectClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5285183D14728292009E8BD6 /* LiveConnectSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 529DB6D1146C7550000973C1 /* LiveConnectSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,27 +58,11 @@
 		5285185C147282E8009E8BD6 /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
 		5285185E147282F8009E8BD6 /* LiveAuthDialog_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 529DB6F8146DFAC1000973C1 /* LiveAuthDialog_iPhone.xib */; settings = {ATTRIBUTES = (Public, ); }; };
 		528518A91473BF59009E8BD6 /* LiveConnectSessionStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 528518A61473BE78009E8BD6 /* LiveConnectSessionStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5297DDF6145E102B005B463E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5297DDF5145E102B005B463E /* SenTestingKit.framework */; };
-		5297DDF7145E102B005B463E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5297DDDD145E102B005B463E /* UIKit.framework */; };
-		5297DDF8145E102B005B463E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5297DDDF145E102B005B463E /* Foundation.framework */; };
 		529AD7A4159D8CD3004A195B /* LiveUploadOverwriteOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 5297B269159A51F400ABFB6A /* LiveUploadOverwriteOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52A497E6149F16A50034BE79 /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C47500149B24F1007E646F /* LiveConnectionHelper.m */; };
 		52A497E8149F174D0034BE79 /* backArrow_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C474EE1499E7F0007E646F /* backArrow_black.png */; };
 		52A497E9149F178D0034BE79 /* LiveConnectionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C474FF149B24F1007E646F /* LiveConnectionHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		52A497EA149F178D0034BE79 /* LiveConnectionCreatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C47502149B2E40007E646F /* LiveConnectionCreatorDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		52B54AEC1491074E001E1E17 /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AE514909F16001E1E17 /* LiveAuthStorage.m */; };
-		52C4750B149B38D1007E646F /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B54AEE14912DB8001E1E17 /* LiveAuthRefreshRequest.m */; };
-		52C4750C149B38D1007E646F /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB712146F5809000973C1 /* LiveAuthRequest.m */; };
-		52C4750D149B38D1007E646F /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EF146C7AEE000973C1 /* LiveConnectClientCore.m */; };
-		52C4750E149B38D1007E646F /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B494521488BDF5001EA573 /* LiveDownloadOperationCore.m */; };
-		52C4750F149B38D1007E646F /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6EC146C7A39000973C1 /* LiveOperationCore.m */; };
-		52C47510149B38D1007E646F /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4946E148B7D67001EA573 /* LiveUploadOperationCore.m */; };
-		52C47511149B38D1007E646F /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C47500149B24F1007E646F /* LiveConnectionHelper.m */; };
-		52C47512149B38D1007E646F /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D0146C7550000973C1 /* LiveConnectClient.m */; };
-		52C47513149B38D1007E646F /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D4146C7550000973C1 /* LiveDownloadOperation.m */; };
-		52C47514149B38D1007E646F /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DB6D7146C7550000973C1 /* LiveOperation.m */; };
-		52C47515149B38D1007E646F /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B4944C1487625C001EA573 /* LiveOperationProgress.m */; };
-		52C47518149B390F007E646F /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5210CF951494445E00C525F3 /* LiveAuthDialog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,7 +102,6 @@
 		5297DDDD145E102B005B463E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5297DDDF145E102B005B463E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5297DDE1145E102B005B463E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5297DDF4145E102B005B463E /* LiveSDKTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveSDKTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5297DDF5145E102B005B463E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5299273D14BE3A3F0075376C /* LiveSDK_framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "LiveSDK_framework-Info.plist"; path = "LiveSDK_framework/LiveSDK_framework-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5299273E14BE3A3F0075376C /* LiveSDK_framework-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LiveSDK_framework-Prefix.pch"; path = "LiveSDK_framework/LiveSDK_framework-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -199,16 +164,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5297DDF0145E102B005B463E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5297DDF6145E102B005B463E /* SenTestingKit.framework in Frameworks */,
-				5297DDF7145E102B005B463E /* UIKit.framework in Frameworks */,
-				5297DDF8145E102B005B463E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -254,7 +209,6 @@
 		5297DDDA145E102B005B463E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5297DDF4145E102B005B463E /* LiveSDKTests.octest */,
 				5285182E14727FE6009E8BD6 /* LiveSDK.framework */,
 			);
 			name = Products;
@@ -469,24 +423,6 @@
 			productReference = 5285182E14727FE6009E8BD6 /* LiveSDK.framework */;
 			productType = "com.apple.product-type.bundle";
 		};
-		5297DDF3145E102B005B463E /* LiveSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5297DE09145E102B005B463E /* Build configuration list for PBXNativeTarget "LiveSDKTests" */;
-			buildPhases = (
-				5297DDEF145E102B005B463E /* Sources */,
-				5297DDF0145E102B005B463E /* Frameworks */,
-				5297DDF1145E102B005B463E /* Resources */,
-				5297DDF2145E102B005B463E /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LiveSDKTests;
-			productName = LiveSDKTests;
-			productReference = 5297DDF4145E102B005B463E /* LiveSDKTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -508,7 +444,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5297DDF3145E102B005B463E /* LiveSDKTests */,
 				5285182D14727FE6009E8BD6 /* LiveSDK */,
 			);
 		};
@@ -525,30 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5297DDF1145E102B005B463E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5297DDF2145E102B005B463E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5285182A14727FE6009E8BD6 /* Sources */ = {
@@ -576,44 +488,6 @@
 				5285185A147282E8009E8BD6 /* LiveConnectSession.m in Sources */,
 				5285185B147282E8009E8BD6 /* LiveDownloadOperation.m in Sources */,
 				5285185C147282E8009E8BD6 /* LiveOperation.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5297DDEF145E102B005B463E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52C47518149B390F007E646F /* LiveAuthDialog.m in Sources */,
-				52C4750B149B38D1007E646F /* LiveAuthRefreshRequest.m in Sources */,
-				52C4750C149B38D1007E646F /* LiveAuthRequest.m in Sources */,
-				52C4750D149B38D1007E646F /* LiveConnectClientCore.m in Sources */,
-				52C4750E149B38D1007E646F /* LiveDownloadOperationCore.m in Sources */,
-				52C4750F149B38D1007E646F /* LiveOperationCore.m in Sources */,
-				52C47510149B38D1007E646F /* LiveUploadOperationCore.m in Sources */,
-				52C47511149B38D1007E646F /* LiveConnectionHelper.m in Sources */,
-				52C47512149B38D1007E646F /* LiveConnectClient.m in Sources */,
-				52C47513149B38D1007E646F /* LiveDownloadOperation.m in Sources */,
-				52C47514149B38D1007E646F /* LiveOperation.m in Sources */,
-				52C47515149B38D1007E646F /* LiveOperationProgress.m in Sources */,
-				5210CFA414954CA800C525F3 /* LiveConnectSession.m in Sources */,
-				5210CF9E14954C5300C525F3 /* JsonParser.m in Sources */,
-				5210CF9F14954C5300C525F3 /* JsonWriter.m in Sources */,
-				5210CFA014954C5300C525F3 /* LiveAuthHelper.m in Sources */,
-				5210CFA114954C5300C525F3 /* StringHelper.m in Sources */,
-				5210CFA214954C5300C525F3 /* UrlHelper.m in Sources */,
-				5210CFA314954C5300C525F3 /* StreamReader.m in Sources */,
-				5210CF9D14954C0A00C525F3 /* LiveApiHelper.m in Sources */,
-				52B54AEC1491074E001E1E17 /* LiveAuthStorage.m in Sources */,
-				52559D911506EC7100F0DF04 /* LiveAuthHelperTests.m in Sources */,
-				52559D921506EC7100F0DF04 /* LiveAuthStorageTests.m in Sources */,
-				52559D931506EC7100F0DF04 /* LiveConnectClientApiTests.m in Sources */,
-				52559D941506EC7100F0DF04 /* LiveConnectClientAuthTests.m in Sources */,
-				52559D951506EC7100F0DF04 /* LiveConnectClientListener.m in Sources */,
-				52559D961506EC7100F0DF04 /* MockFactory.m in Sources */,
-				52559D971506EC7100F0DF04 /* MockResponse.m in Sources */,
-				52559D981506EC7100F0DF04 /* MockUrlConnection.m in Sources */,
-				52559D991506EC7100F0DF04 /* StringHelperTests.m in Sources */,
-				52559D9A1506EC7100F0DF04 /* UrlHelperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -725,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -752,36 +628,6 @@
 			};
 			name = Release;
 		};
-		5297DE0A145E102B005B463E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LiveSDK/LiveSDK-Prefix.pch";
-				INFOPLIST_FILE = "UnitTests/LiveSDKTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		5297DE0B145E102B005B463E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LiveSDK/LiveSDK-Prefix.pch";
-				INFOPLIST_FILE = "UnitTests/LiveSDKTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -799,15 +645,6 @@
 			buildConfigurations = (
 				5297DE04145E102B005B463E /* Debug */,
 				5297DE05145E102B005B463E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5297DE09145E102B005B463E /* Build configuration list for PBXNativeTarget "LiveSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5297DE0A145E102B005B463E /* Debug */,
-				5297DE0B145E102B005B463E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

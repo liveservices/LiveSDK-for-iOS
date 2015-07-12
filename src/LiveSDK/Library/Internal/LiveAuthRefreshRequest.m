@@ -46,11 +46,11 @@
     self = [super init];
     if (self) 
     {
-        _clientId = [clientId retain];
-        _scopes = [scopes retain];
-        _refreshToken = [refreshToken retain];
+        _clientId = clientId;
+        _scopes = scopes;
+        _refreshToken = refreshToken;
         _delegate = delegate;
-        _userState = [userState retain];
+        _userState = userState;
         _client = client;
     }
     
@@ -60,15 +60,6 @@
 - (void) dealloc
 {
     [tokenConnection cancel];
-    
-    [_clientId release];
-    [_scopes release];
-    [_refreshToken release];
-    [_userState release];
-    [tokenConnection release];
-    [tokenResponseData release];
-    
-    [super dealloc];
 }
 
 - (void) execute
@@ -122,7 +113,7 @@ didReceiveResponse:(NSURLResponse *)response
     }
     else
     {
-        self.tokenResponseData = [[[NSMutableData alloc] init] autorelease];
+        self.tokenResponseData = [[NSMutableData alloc] init];
     }
 }
 

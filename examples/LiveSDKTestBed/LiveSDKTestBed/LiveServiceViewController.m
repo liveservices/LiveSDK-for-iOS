@@ -41,19 +41,6 @@ static NSString * const CLIENT_ID = @"000000004808C307"; //@"%CLIENT_ID%";
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (void)dealloc 
-{
-    [liveClient release];
-    [outputView release];
-    [signInButton release];
-    [scopesTextField release];
-    [pathTextField release];
-    [destinationTextField release];
-    [jsonBodyTextView release];
-    [imgView release];
-    [super dealloc];
-}
-
 #pragma mark - Output handling
 - (void) handleException:(id)exception
                  context:(NSString *)context
@@ -117,11 +104,10 @@ static NSString * const CLIENT_ID = @"000000004808C307"; //@"%CLIENT_ID%";
         [NSException raise:NSInvalidArgumentException format:@"The CLIENT_ID value must be specified."];
     }
     
-    self.liveClient = [[[LiveConnectClient alloc] initWithClientId:CLIENT_ID 
+    self.liveClient = [[LiveConnectClient alloc] initWithClientId:CLIENT_ID
                                                            scopes:[scopeText componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
                                                          delegate:self 
-                                                        userState:@"init"] 
-                       autorelease ];
+                                                        userState:@"init"];
 }
 
 - (void) loginWithScopes:(NSString *)scopeText
@@ -246,7 +232,7 @@ static NSString * const CLIENT_ID = @"000000004808C307"; //@"%CLIENT_ID%";
         NSString *path = [[NSBundle mainBundle] pathForResource:@"volvo_c70" 
                                                          ofType:@"jpg"];
         
-        NSData *data = [[[NSData alloc]initWithContentsOfFile:path] autorelease];
+        NSData *data = [[NSData alloc]initWithContentsOfFile:path];
         
         NSString *uploadPath = self.pathTextField.text;
         if ([uploadPath isEqual:@""] || 

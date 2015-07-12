@@ -32,20 +32,14 @@
 
 @synthesize window = _window;
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController * myViewController = [self initUIViewController];
+    UIViewController * myViewController = [self ini_tUIViewController];
     [self.window setRootViewController: myViewController];
     
     [self.window makeKeyAndVisible];
@@ -91,16 +85,16 @@
      */
 }
 
-- (UIViewController *) initUIViewController
+- (UIViewController *) ini_tUIViewController
 {
     NSString *device = [[UIDevice currentDevice] model];
     
     if ([device hasPrefix:@"iPad"])
     {
-        return  [[[LiveServiceViewController_iPad alloc] initWithNibName:nil bundle:nil] autorelease];
+        return  [[LiveServiceViewController_iPad alloc] initWithNibName:nil bundle:nil];
     }
     else {
-        return [[[LiveServiceViewController_iPhone alloc] initWithNibName:nil bundle:nil] autorelease];
+        return [[LiveServiceViewController_iPhone alloc] initWithNibName:nil bundle:nil];
     }
 }
 
