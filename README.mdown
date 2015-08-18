@@ -1,10 +1,19 @@
-Live SDK for iOS 
+Annoucement: There's a new OneDrive SDK
+================
+
+The Live SDK has been replaced by the [OneDrive API](https://dev.onedrive.com) and 
+[OneDrive SDK for iOS](https://github.com/OneDrive/onedrive-sdk-ios). All new projects
+should use the OneDrive API to integrate with OneDrive instead of Live SDK.
+
+This Live SDK project will remain available for existing applications to continue to use
+but new application development should be done using the OneDrive SDK.
+
+
+Live SDK for iOS (legacy)
 ================
 
 version 5.6
 
-###New OneDrive SDK
-To easily integrate OneDrive into your iOS app, check out our new [OneDrive iOS SDK](http://github.com/OneDrive/onedrive-sdk-ios).
 
 1. Introduction
 ---------------
