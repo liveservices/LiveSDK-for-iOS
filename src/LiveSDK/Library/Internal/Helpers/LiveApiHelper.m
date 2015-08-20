@@ -111,10 +111,9 @@
         return;
     }
     
-    *textResponse = [[[NSString alloc] initWithData:data
-                                           encoding:NSUTF8StringEncoding]
-                     autorelease];
-        
+    *textResponse = [[NSString alloc] initWithData:data
+                                          encoding:NSUTF8StringEncoding];
+
     *response = [MSJSONParser parseText:*textResponse 
                                   error:error ];
     

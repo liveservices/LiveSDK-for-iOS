@@ -41,6 +41,17 @@
 @synthesize currentFolder;
 @synthesize currentModal;
 
++ (void) setEdgesForExtendedLayout:(UIViewController *)ctrl {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic ignored "-Wdeprecated"
+    // http://www.ifun.cc/blog/2014/02/08/gua-pei-ios7kai-fa-1/
+    if ([ctrl respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        [ctrl setEdgesForExtendedLayout:UIRectEdgeNone];
+    }
+#pragma clang diagnostic pop
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -63,6 +74,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [[self class] setEdgesForExtendedLayout:self];
    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
                                              initWithBarButtonSystemItem:UIBarButtonSystemItemDone

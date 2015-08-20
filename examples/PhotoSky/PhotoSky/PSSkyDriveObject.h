@@ -25,7 +25,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import <LiveSDK/LiveConnectClient.h>
+#import "LiveConnectClient.h" // #import <LiveSDK/LiveConnectClient.h>
 
 @class PSSkyDriveObject;
 

@@ -45,27 +45,15 @@
     self = [super init];
     if (self) 
     {
-        _accessToken = [accessToken retain];
-        _authenticationToken = [authenticationToken retain];
-        _refreshToken = [refreshToken retain];
-        _scopes = [scopes retain];
-        _expires = [expires retain];
-        _userId = [userId retain];
+        _accessToken = accessToken;
+        _authenticationToken = authenticationToken;
+        _refreshToken = refreshToken;
+        _scopes = scopes;
+        _expires = expires;
+        _userId = userId;
     }
     
     return self;
-}
-
-- (void)dealloc 
-{
-    [_accessToken release];
-    [_authenticationToken release];
-    [_refreshToken release];
-    [_scopes release];
-    [_expires release];
-    [_userId release];
-    
-    [super dealloc];
 }
 
 @end

@@ -32,7 +32,7 @@ static id<LiveConnectionCreatorDelegate> overrideCreator = nil;
 
 + (void) setLiveConnectCreator:(id<LiveConnectionCreatorDelegate>)creator
 {
-    overrideCreator = [creator retain];
+    overrideCreator = creator;
 }
 
 + (id) createConnectionWithRequest:(NSURLRequest *)request

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4ECBAC420D212305B6DCA072 /* libPods-PhotoSky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8E5798FAFB664E7A1A4B43 /* libPods-PhotoSky.a */; };
 		5207731F14FD4ADA007E3059 /* PSSkyPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207731D14FD4ADA007E3059 /* PSSkyPhotoViewer.m */; };
 		5207732014FD4ADA007E3059 /* PSSkyPhotoViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5207731E14FD4ADA007E3059 /* PSSkyPhotoViewer.xib */; };
 		5207732514FD4DD5007E3059 /* PSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5207732314FD4DD5007E3059 /* PSMainViewController.m */; };
@@ -23,11 +22,33 @@
 		5248D13F14FE3DF80096720F /* PSSkyDriveFolderPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5248D13D14FE3DF80096720F /* PSSkyDriveFolderPicker.m */; };
 		5248D14014FE3DF80096720F /* PSSkyDriveFolderPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5248D13E14FE3DF80096720F /* PSSkyDriveFolderPicker.xib */; };
 		526B94A617692BD0000E29D2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 526B94A517692BD0000E29D2 /* Default-568h@2x.png */; };
+		A2EF33BC1B521327006CE39D /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33831B521327006CE39D /* JsonParser.m */; };
+		A2EF33BD1B521327006CE39D /* JsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33851B521327006CE39D /* JsonWriter.m */; };
+		A2EF33BE1B521327006CE39D /* LiveApiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33871B521327006CE39D /* LiveApiHelper.m */; };
+		A2EF33BF1B521327006CE39D /* LiveAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33891B521327006CE39D /* LiveAuthHelper.m */; };
+		A2EF33C01B521327006CE39D /* LiveConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF338C1B521327006CE39D /* LiveConnectionHelper.m */; };
+		A2EF33C11B521327006CE39D /* StreamReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF338E1B521327006CE39D /* StreamReader.m */; };
+		A2EF33C21B521327006CE39D /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33901B521327006CE39D /* StringHelper.m */; };
+		A2EF33C31B521327006CE39D /* UrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33921B521327006CE39D /* UrlHelper.m */; };
+		A2EF33C41B521327006CE39D /* LiveAuthDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33941B521327006CE39D /* LiveAuthDialog.m */; };
+		A2EF33C51B521327006CE39D /* LiveAuthDialog_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2EF33951B521327006CE39D /* LiveAuthDialog_iPad.xib */; };
+		A2EF33C61B521327006CE39D /* LiveAuthDialog_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2EF33961B521327006CE39D /* LiveAuthDialog_iPhone.xib */; };
+		A2EF33C71B521327006CE39D /* LiveAuthRefreshRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33991B521327006CE39D /* LiveAuthRefreshRequest.m */; };
+		A2EF33C81B521327006CE39D /* LiveAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF339B1B521327006CE39D /* LiveAuthRequest.m */; };
+		A2EF33C91B521327006CE39D /* LiveAuthStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF339D1B521327006CE39D /* LiveAuthStorage.m */; };
+		A2EF33CA1B521327006CE39D /* LiveConnectClientCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF339F1B521327006CE39D /* LiveConnectClientCore.m */; };
+		A2EF33CB1B521327006CE39D /* LiveDownloadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33A21B521327006CE39D /* LiveDownloadOperationCore.m */; };
+		A2EF33CC1B521327006CE39D /* LiveOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33A51B521327006CE39D /* LiveOperationCore.m */; };
+		A2EF33CD1B521327006CE39D /* LiveUploadOperationCore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33A81B521327006CE39D /* LiveUploadOperationCore.m */; };
+		A2EF33CE1B521327006CE39D /* backArrow_black.png in Resources */ = {isa = PBXBuildFile; fileRef = A2EF33AA1B521327006CE39D /* backArrow_black.png */; };
+		A2EF33CF1B521327006CE39D /* LiveConnectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33AE1B521327006CE39D /* LiveConnectClient.m */; };
+		A2EF33D01B521327006CE39D /* LiveConnectSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33B01B521327006CE39D /* LiveConnectSession.m */; };
+		A2EF33D11B521327006CE39D /* LiveDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33B31B521327006CE39D /* LiveDownloadOperation.m */; };
+		A2EF33D21B521327006CE39D /* LiveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33B61B521327006CE39D /* LiveOperation.m */; };
+		A2EF33D31B521327006CE39D /* LiveOperationProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EF33B91B521327006CE39D /* LiveOperationProgress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D0F2C182BE02721B87D582D /* Pods-PhotoSky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSky/Pods-PhotoSky.debug.xcconfig"; sourceTree = "<group>"; };
-		3A8E5798FAFB664E7A1A4B43 /* libPods-PhotoSky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoSky.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5207731C14FD4ADA007E3059 /* PSSkyPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSkyPhotoViewer.h; sourceTree = "<group>"; };
 		5207731D14FD4ADA007E3059 /* PSSkyPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSkyPhotoViewer.m; sourceTree = "<group>"; };
 		5207731E14FD4ADA007E3059 /* PSSkyPhotoViewer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSSkyPhotoViewer.xib; sourceTree = "<group>"; };
@@ -51,7 +72,62 @@
 		5248D13D14FE3DF80096720F /* PSSkyDriveFolderPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSkyDriveFolderPicker.m; sourceTree = "<group>"; };
 		5248D13E14FE3DF80096720F /* PSSkyDriveFolderPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSSkyDriveFolderPicker.xib; sourceTree = "<group>"; };
 		526B94A517692BD0000E29D2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		EFD5686BE4FDE0EB71259F6C /* Pods-PhotoSky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSky.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSky/Pods-PhotoSky.release.xcconfig"; sourceTree = "<group>"; };
+		A2EF33821B521327006CE39D /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
+		A2EF33831B521327006CE39D /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
+		A2EF33841B521327006CE39D /* JsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonWriter.h; sourceTree = "<group>"; };
+		A2EF33851B521327006CE39D /* JsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonWriter.m; sourceTree = "<group>"; };
+		A2EF33861B521327006CE39D /* LiveApiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveApiHelper.h; sourceTree = "<group>"; };
+		A2EF33871B521327006CE39D /* LiveApiHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveApiHelper.m; sourceTree = "<group>"; };
+		A2EF33881B521327006CE39D /* LiveAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthHelper.h; sourceTree = "<group>"; };
+		A2EF33891B521327006CE39D /* LiveAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthHelper.m; sourceTree = "<group>"; };
+		A2EF338A1B521327006CE39D /* LiveConnectionCreatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectionCreatorDelegate.h; sourceTree = "<group>"; };
+		A2EF338B1B521327006CE39D /* LiveConnectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectionHelper.h; sourceTree = "<group>"; };
+		A2EF338C1B521327006CE39D /* LiveConnectionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveConnectionHelper.m; sourceTree = "<group>"; };
+		A2EF338D1B521327006CE39D /* StreamReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamReader.h; sourceTree = "<group>"; };
+		A2EF338E1B521327006CE39D /* StreamReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamReader.m; sourceTree = "<group>"; };
+		A2EF338F1B521327006CE39D /* StringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringHelper.h; sourceTree = "<group>"; };
+		A2EF33901B521327006CE39D /* StringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringHelper.m; sourceTree = "<group>"; };
+		A2EF33911B521327006CE39D /* UrlHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlHelper.h; sourceTree = "<group>"; };
+		A2EF33921B521327006CE39D /* UrlHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlHelper.m; sourceTree = "<group>"; };
+		A2EF33931B521327006CE39D /* LiveAuthDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthDialog.h; sourceTree = "<group>"; };
+		A2EF33941B521327006CE39D /* LiveAuthDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthDialog.m; sourceTree = "<group>"; };
+		A2EF33951B521327006CE39D /* LiveAuthDialog_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveAuthDialog_iPad.xib; sourceTree = "<group>"; };
+		A2EF33961B521327006CE39D /* LiveAuthDialog_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveAuthDialog_iPhone.xib; sourceTree = "<group>"; };
+		A2EF33971B521327006CE39D /* LiveAuthDialogDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthDialogDelegate.h; sourceTree = "<group>"; };
+		A2EF33981B521327006CE39D /* LiveAuthRefreshRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthRefreshRequest.h; sourceTree = "<group>"; };
+		A2EF33991B521327006CE39D /* LiveAuthRefreshRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthRefreshRequest.m; sourceTree = "<group>"; };
+		A2EF339A1B521327006CE39D /* LiveAuthRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthRequest.h; sourceTree = "<group>"; };
+		A2EF339B1B521327006CE39D /* LiveAuthRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthRequest.m; sourceTree = "<group>"; };
+		A2EF339C1B521327006CE39D /* LiveAuthStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthStorage.h; sourceTree = "<group>"; };
+		A2EF339D1B521327006CE39D /* LiveAuthStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAuthStorage.m; sourceTree = "<group>"; };
+		A2EF339E1B521327006CE39D /* LiveConnectClientCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectClientCore.h; sourceTree = "<group>"; };
+		A2EF339F1B521327006CE39D /* LiveConnectClientCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveConnectClientCore.m; sourceTree = "<group>"; };
+		A2EF33A01B521327006CE39D /* LiveConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConstants.h; sourceTree = "<group>"; };
+		A2EF33A11B521327006CE39D /* LiveDownloadOperationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDownloadOperationCore.h; sourceTree = "<group>"; };
+		A2EF33A21B521327006CE39D /* LiveDownloadOperationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveDownloadOperationCore.m; sourceTree = "<group>"; };
+		A2EF33A31B521327006CE39D /* LiveDownloadOperationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDownloadOperationInternal.h; sourceTree = "<group>"; };
+		A2EF33A41B521327006CE39D /* LiveOperationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOperationCore.h; sourceTree = "<group>"; };
+		A2EF33A51B521327006CE39D /* LiveOperationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveOperationCore.m; sourceTree = "<group>"; };
+		A2EF33A61B521327006CE39D /* LiveOperationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOperationInternal.h; sourceTree = "<group>"; };
+		A2EF33A71B521327006CE39D /* LiveUploadOperationCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveUploadOperationCore.h; sourceTree = "<group>"; };
+		A2EF33A81B521327006CE39D /* LiveUploadOperationCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveUploadOperationCore.m; sourceTree = "<group>"; };
+		A2EF33AA1B521327006CE39D /* backArrow_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow_black.png; sourceTree = "<group>"; };
+		A2EF33AC1B521327006CE39D /* LiveAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAuthDelegate.h; sourceTree = "<group>"; };
+		A2EF33AD1B521327006CE39D /* LiveConnectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectClient.h; sourceTree = "<group>"; };
+		A2EF33AE1B521327006CE39D /* LiveConnectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveConnectClient.m; sourceTree = "<group>"; };
+		A2EF33AF1B521327006CE39D /* LiveConnectSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectSession.h; sourceTree = "<group>"; };
+		A2EF33B01B521327006CE39D /* LiveConnectSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveConnectSession.m; sourceTree = "<group>"; };
+		A2EF33B11B521327006CE39D /* LiveConnectSessionStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveConnectSessionStatus.h; sourceTree = "<group>"; };
+		A2EF33B21B521327006CE39D /* LiveDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDownloadOperation.h; sourceTree = "<group>"; };
+		A2EF33B31B521327006CE39D /* LiveDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveDownloadOperation.m; sourceTree = "<group>"; };
+		A2EF33B41B521327006CE39D /* LiveDownloadOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveDownloadOperationDelegate.h; sourceTree = "<group>"; };
+		A2EF33B51B521327006CE39D /* LiveOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOperation.h; sourceTree = "<group>"; };
+		A2EF33B61B521327006CE39D /* LiveOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveOperation.m; sourceTree = "<group>"; };
+		A2EF33B71B521327006CE39D /* LiveOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOperationDelegate.h; sourceTree = "<group>"; };
+		A2EF33B81B521327006CE39D /* LiveOperationProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOperationProgress.h; sourceTree = "<group>"; };
+		A2EF33B91B521327006CE39D /* LiveOperationProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveOperationProgress.m; sourceTree = "<group>"; };
+		A2EF33BA1B521327006CE39D /* LiveUploadOperationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveUploadOperationDelegate.h; sourceTree = "<group>"; };
+		A2EF33BB1B521327006CE39D /* LiveUploadOverwriteOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveUploadOverwriteOption.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,29 +138,19 @@
 				520C9CE914FD46BB002BF021 /* UIKit.framework in Frameworks */,
 				520C9CEB14FD46BB002BF021 /* Foundation.framework in Frameworks */,
 				520C9CED14FD46BB002BF021 /* CoreGraphics.framework in Frameworks */,
-				4ECBAC420D212305B6DCA072 /* libPods-PhotoSky.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07540E27C035B049820B8EBC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2D0F2C182BE02721B87D582D /* Pods-PhotoSky.debug.xcconfig */,
-				EFD5686BE4FDE0EB71259F6C /* Pods-PhotoSky.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		520C9CD914FD46BB002BF021 = {
 			isa = PBXGroup;
 			children = (
+				A2EF337F1B521327006CE39D /* Library */,
 				520C9CEE14FD46BB002BF021 /* PhotoSky */,
 				520C9CE714FD46BB002BF021 /* Frameworks */,
 				520C9CE514FD46BB002BF021 /* Products */,
-				07540E27C035B049820B8EBC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +168,6 @@
 				520C9CE814FD46BB002BF021 /* UIKit.framework */,
 				520C9CEA14FD46BB002BF021 /* Foundation.framework */,
 				520C9CEC14FD46BB002BF021 /* CoreGraphics.framework */,
-				3A8E5798FAFB664E7A1A4B43 /* libPods-PhotoSky.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +206,102 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A2EF337F1B521327006CE39D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A2EF33801B521327006CE39D /* Internal */,
+				A2EF33AB1B521327006CE39D /* Public */,
+			);
+			name = Library;
+			path = ../../src/LiveSDK/Library;
+			sourceTree = "<group>";
+		};
+		A2EF33801B521327006CE39D /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A2EF33811B521327006CE39D /* Helpers */,
+				A2EF33931B521327006CE39D /* LiveAuthDialog.h */,
+				A2EF33941B521327006CE39D /* LiveAuthDialog.m */,
+				A2EF33951B521327006CE39D /* LiveAuthDialog_iPad.xib */,
+				A2EF33961B521327006CE39D /* LiveAuthDialog_iPhone.xib */,
+				A2EF33971B521327006CE39D /* LiveAuthDialogDelegate.h */,
+				A2EF33981B521327006CE39D /* LiveAuthRefreshRequest.h */,
+				A2EF33991B521327006CE39D /* LiveAuthRefreshRequest.m */,
+				A2EF339A1B521327006CE39D /* LiveAuthRequest.h */,
+				A2EF339B1B521327006CE39D /* LiveAuthRequest.m */,
+				A2EF339C1B521327006CE39D /* LiveAuthStorage.h */,
+				A2EF339D1B521327006CE39D /* LiveAuthStorage.m */,
+				A2EF339E1B521327006CE39D /* LiveConnectClientCore.h */,
+				A2EF339F1B521327006CE39D /* LiveConnectClientCore.m */,
+				A2EF33A01B521327006CE39D /* LiveConstants.h */,
+				A2EF33A11B521327006CE39D /* LiveDownloadOperationCore.h */,
+				A2EF33A21B521327006CE39D /* LiveDownloadOperationCore.m */,
+				A2EF33A31B521327006CE39D /* LiveDownloadOperationInternal.h */,
+				A2EF33A41B521327006CE39D /* LiveOperationCore.h */,
+				A2EF33A51B521327006CE39D /* LiveOperationCore.m */,
+				A2EF33A61B521327006CE39D /* LiveOperationInternal.h */,
+				A2EF33A71B521327006CE39D /* LiveUploadOperationCore.h */,
+				A2EF33A81B521327006CE39D /* LiveUploadOperationCore.m */,
+				A2EF33A91B521327006CE39D /* Resources */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		A2EF33811B521327006CE39D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A2EF33821B521327006CE39D /* JsonParser.h */,
+				A2EF33831B521327006CE39D /* JsonParser.m */,
+				A2EF33841B521327006CE39D /* JsonWriter.h */,
+				A2EF33851B521327006CE39D /* JsonWriter.m */,
+				A2EF33861B521327006CE39D /* LiveApiHelper.h */,
+				A2EF33871B521327006CE39D /* LiveApiHelper.m */,
+				A2EF33881B521327006CE39D /* LiveAuthHelper.h */,
+				A2EF33891B521327006CE39D /* LiveAuthHelper.m */,
+				A2EF338A1B521327006CE39D /* LiveConnectionCreatorDelegate.h */,
+				A2EF338B1B521327006CE39D /* LiveConnectionHelper.h */,
+				A2EF338C1B521327006CE39D /* LiveConnectionHelper.m */,
+				A2EF338D1B521327006CE39D /* StreamReader.h */,
+				A2EF338E1B521327006CE39D /* StreamReader.m */,
+				A2EF338F1B521327006CE39D /* StringHelper.h */,
+				A2EF33901B521327006CE39D /* StringHelper.m */,
+				A2EF33911B521327006CE39D /* UrlHelper.h */,
+				A2EF33921B521327006CE39D /* UrlHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A2EF33A91B521327006CE39D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2EF33AA1B521327006CE39D /* backArrow_black.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A2EF33AB1B521327006CE39D /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				A2EF33AC1B521327006CE39D /* LiveAuthDelegate.h */,
+				A2EF33AD1B521327006CE39D /* LiveConnectClient.h */,
+				A2EF33AE1B521327006CE39D /* LiveConnectClient.m */,
+				A2EF33AF1B521327006CE39D /* LiveConnectSession.h */,
+				A2EF33B01B521327006CE39D /* LiveConnectSession.m */,
+				A2EF33B11B521327006CE39D /* LiveConnectSessionStatus.h */,
+				A2EF33B21B521327006CE39D /* LiveDownloadOperation.h */,
+				A2EF33B31B521327006CE39D /* LiveDownloadOperation.m */,
+				A2EF33B41B521327006CE39D /* LiveDownloadOperationDelegate.h */,
+				A2EF33B51B521327006CE39D /* LiveOperation.h */,
+				A2EF33B61B521327006CE39D /* LiveOperation.m */,
+				A2EF33B71B521327006CE39D /* LiveOperationDelegate.h */,
+				A2EF33B81B521327006CE39D /* LiveOperationProgress.h */,
+				A2EF33B91B521327006CE39D /* LiveOperationProgress.m */,
+				A2EF33BA1B521327006CE39D /* LiveUploadOperationDelegate.h */,
+				A2EF33BB1B521327006CE39D /* LiveUploadOverwriteOption.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,11 +309,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 520C9D0514FD46BB002BF021 /* Build configuration list for PBXNativeTarget "PhotoSky" */;
 			buildPhases = (
-				3D901B39CF6FA1515FB5805F /* Check Pods Manifest.lock */,
 				520C9CE014FD46BB002BF021 /* Sources */,
-				520C9CE114FD46BB002BF021 /* Frameworks */,
 				520C9CE214FD46BB002BF021 /* Resources */,
-				B42AE604C36B0797D76AB1FD /* Copy Pods Resources */,
+				520C9CE114FD46BB002BF021 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,48 +354,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				520C9CF314FD46BB002BF021 /* InfoPlist.strings in Resources */,
+				A2EF33C51B521327006CE39D /* LiveAuthDialog_iPad.xib in Resources */,
 				5207732014FD4ADA007E3059 /* PSSkyPhotoViewer.xib in Resources */,
+				A2EF33CE1B521327006CE39D /* backArrow_black.png in Resources */,
 				5207732614FD4DD5007E3059 /* PSMainViewController.xib in Resources */,
 				5207732914FD4EA4007E3059 /* skydrive.jpeg in Resources */,
 				5248D14014FE3DF80096720F /* PSSkyDriveFolderPicker.xib in Resources */,
+				A2EF33C61B521327006CE39D /* LiveAuthDialog_iPhone.xib in Resources */,
 				526B94A617692BD0000E29D2 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3D901B39CF6FA1515FB5805F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B42AE604C36B0797D76AB1FD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoSky/Pods-PhotoSky-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		520C9CE014FD46BB002BF021 /* Sources */ = {
@@ -245,10 +374,31 @@
 			files = (
 				520C9CF514FD46BB002BF021 /* main.m in Sources */,
 				520C9CF914FD46BB002BF021 /* PSAppDelegate.m in Sources */,
+				A2EF33C41B521327006CE39D /* LiveAuthDialog.m in Sources */,
+				A2EF33D21B521327006CE39D /* LiveOperation.m in Sources */,
+				A2EF33C91B521327006CE39D /* LiveAuthStorage.m in Sources */,
 				5207731F14FD4ADA007E3059 /* PSSkyPhotoViewer.m in Sources */,
+				A2EF33D01B521327006CE39D /* LiveConnectSession.m in Sources */,
 				5207732514FD4DD5007E3059 /* PSMainViewController.m in Sources */,
 				5207733414FDA851007E3059 /* PSSkyDriveObject.m in Sources */,
+				A2EF33CD1B521327006CE39D /* LiveUploadOperationCore.m in Sources */,
+				A2EF33C81B521327006CE39D /* LiveAuthRequest.m in Sources */,
+				A2EF33CB1B521327006CE39D /* LiveDownloadOperationCore.m in Sources */,
 				5248D13F14FE3DF80096720F /* PSSkyDriveFolderPicker.m in Sources */,
+				A2EF33BE1B521327006CE39D /* LiveApiHelper.m in Sources */,
+				A2EF33D31B521327006CE39D /* LiveOperationProgress.m in Sources */,
+				A2EF33C01B521327006CE39D /* LiveConnectionHelper.m in Sources */,
+				A2EF33C21B521327006CE39D /* StringHelper.m in Sources */,
+				A2EF33C31B521327006CE39D /* UrlHelper.m in Sources */,
+				A2EF33CF1B521327006CE39D /* LiveConnectClient.m in Sources */,
+				A2EF33C11B521327006CE39D /* StreamReader.m in Sources */,
+				A2EF33CC1B521327006CE39D /* LiveOperationCore.m in Sources */,
+				A2EF33BD1B521327006CE39D /* JsonWriter.m in Sources */,
+				A2EF33D11B521327006CE39D /* LiveDownloadOperation.m in Sources */,
+				A2EF33C71B521327006CE39D /* LiveAuthRefreshRequest.m in Sources */,
+				A2EF33CA1B521327006CE39D /* LiveConnectClientCore.m in Sources */,
+				A2EF33BC1B521327006CE39D /* JsonParser.m in Sources */,
+				A2EF33BF1B521327006CE39D /* LiveAuthHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +439,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -305,6 +456,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../src/**",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -327,6 +483,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -336,6 +493,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"../../src/**",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -346,7 +508,6 @@
 		};
 		520C9D0614FD46BB002BF021 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0F2C182BE02721B87D582D /* Pods-PhotoSky.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,7 +524,6 @@
 		};
 		520C9D0714FD46BB002BF021 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFD5686BE4FDE0EB71259F6C /* Pods-PhotoSky.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

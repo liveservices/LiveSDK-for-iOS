@@ -41,22 +41,13 @@
                            bundle:nibBundleOrNil];
     if (self) 
     {
-        _startUrl = [startUrl retain];
-        _endUrl =  [endUrl retain];
+        _startUrl = startUrl;
+        _endUrl =  endUrl;
         _delegate = delegate;
         canDismiss = NO;
     }
     
     return self;
-}
-
-- (void)dealloc 
-{
-    [_startUrl release];
-    [_endUrl release];
-    [webView release];
-    
-    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,8 +82,8 @@
      forControlEvents:UIControlEventTouchUpInside]; 
     
     //create a UIBarButtonItem with the button as a custom view
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc]
-                                              initWithCustomView:button]autorelease];  
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
+                                              initWithCustomView:button];  
     
     //Load the Url request in the UIWebView.
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:_startUrl];

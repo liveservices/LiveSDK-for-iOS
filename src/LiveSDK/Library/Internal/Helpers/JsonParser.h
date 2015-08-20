@@ -66,8 +66,6 @@
 	NSError                        *_error;
 	BOOL                            _skipJavascriptComments;
 	BOOL                            _supportJSONLight;
-	Class                           _collectionClass;
-	Class                           _objectClass;
 }
 
 + (id) parseText:(NSString*)text error:(NSError**)error;

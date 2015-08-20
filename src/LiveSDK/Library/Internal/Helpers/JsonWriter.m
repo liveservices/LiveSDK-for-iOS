@@ -44,7 +44,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 	}
 	@finally
 	{
-		[writer release];
+		//[writer release];
 	}
 	return text;
 }
@@ -66,7 +66,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 				//       escaped.
 				NSCharacterSet *validCharacters = [NSCharacterSet characterSetWithCharactersInString:
 					@" !#$%&'()*+,-.0123456789:;<=>?@[]^_`{|}~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz/"];
-				sInvalidStringCharacters = [[validCharacters invertedSet] retain];
+				sInvalidStringCharacters = [validCharacters invertedSet];
 			}
 		}
 	}
@@ -76,7 +76,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 	if (searchRange.location == NSNotFound)
 		return value;
 
-	NSMutableString *result = [[[NSMutableString alloc] init] autorelease];
+	NSMutableString *result = [[NSMutableString alloc] init];
 	if (!result) return nil;  // out of memory?
 
 	NSUInteger strLen = [value length];
@@ -148,21 +148,12 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 	self = [super init];
 	if (self)
 	{
-		_root = [value retain];
-		_rootSchema = [schema retain];
+		_root = value;
+		_rootSchema = schema;
 		_objectStack = [[NSMutableArray alloc] init];
 		_memberKeysSelector = NULL;
 	}
 	return self;
-}
-
-- (void) dealloc
-{
-	[_root release];
-	[_rootSchema release];
-	[_text release];
-	[_objectStack release];
-	[super dealloc];
 }
 
 - (NSString*) JSONText
@@ -176,7 +167,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 			[self appendValue:_root];
 		// MSDbgCheck([_objectStack count] == 0);
 	}
-	return [[_text retain] autorelease];
+	return _text;
 }
 
 - (void) pushIndentLevel
@@ -210,7 +201,8 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 	}
 	else if (_memberKeysSelector && [value respondsToSelector:_memberKeysSelector])
 	{
-		id schema = [value performSelector:_memberKeysSelector];
+		//id schema = [value performSelector:_memberKeysSelector];
+        id schema = ((id (*)(id, SEL))[value methodForSelector:_memberKeysSelector])(value, _memberKeysSelector);
 		[self appendObject:value withMemberInfo:schema];
 	}
 	else if ([value respondsToSelector:@selector(JSONMemberKeys)])
@@ -369,7 +361,7 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 	// When an NSNumber value is initialized with +numberWithBool: it generates a
 	// CFBooleanRef value (class == NSCFBoolean). This is the safest test to determine
 	// if this NSNumber value is actually a boolean value
-	if (CFGetTypeID(self) == CFBooleanGetTypeID())
+	if (CFGetTypeID((__bridge CFTypeRef)(self)) == CFBooleanGetTypeID())
 		return [self boolValue] ? @"true" : @"false";
 
 	// Force the locale for the text generation to en_US to match the JSON spec
@@ -378,7 +370,6 @@ NSString * const MSJSONWriterCycleException = @"MSJSONWriterCycleException";
 	{
 		NSLocale *localeUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
 		NSString *numberString = [self descriptionWithLocale:localeUS];
-		[localeUS release];
 		return numberString;
 	}
 	else

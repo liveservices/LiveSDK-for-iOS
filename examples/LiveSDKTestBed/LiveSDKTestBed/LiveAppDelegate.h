@@ -30,6 +30,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (UIViewController *) initUIViewController;
+- (UIViewController *) ini_tUIViewController;
 
 @end
