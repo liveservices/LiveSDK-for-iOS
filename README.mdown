@@ -32,7 +32,7 @@ For questions on how to use the sdk visit http://stackoverflow.com/questions/tag
 
 You can reference the iOS API in two ways.
 
-###2.1 Install with Cocoapods
+###2.1 Install with CocoaPods
 
 * [Install cocoapods](http://guides.cocoapods.org/using/getting-started.html) following the getting started guide.
 * Add the following to your Podfile: `pod 'LiveSDK'`
