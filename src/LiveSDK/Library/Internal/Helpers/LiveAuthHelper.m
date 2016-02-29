@@ -38,22 +38,39 @@ NSString * LIVE_ENDPOINT_LOGIN_HOST = @"login.live.com";
 
 + (NSBundle *) getSDKBundle
 {
-    NSString *sdkPath = [[NSBundle mainBundle] pathForResource:@"LiveSDK"
-                                                        ofType:@"framework"];
+    NSString *resource = @"LiveSDK";
+    NSString *type = @"framework";
+    
+    NSString *sdkPath = [[NSBundle mainBundle] pathForResource:resource
+                                                        ofType:type];
+    if (!sdkPath) { /* Cocoapods use_frameworks! case */
+        
+        NSString *directory = @"Frameworks";
+        sdkPath = [[NSBundle mainBundle] pathForResource:resource
+                                                  ofType:type
+                                             inDirectory:directory];
+    }
     return (sdkPath)? [NSBundle bundleWithPath:sdkPath] : [NSBundle mainBundle];
 }
 
 + (UIImage *) getBackButtonImage
 {
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"LiveSDK.framework/Resources/backArrow_black"
-                                                      ofType:@"png"];
-    if (path) {
-        return [UIImage imageWithContentsOfFile:path];
+    NSString *resource = @"LiveSDK.framework/Resources/backArrow_black";
+    NSString *type = @"png";
+    NSString *path = [[NSBundle mainBundle] pathForResource:resource
+                                                     ofType:type];
+    
+    if (!path) { /* Cocoapods use_frameworks! case */
+        
+        resource = @"LiveSDK.framework/backArrow_black";
+        NSString *directory = @"Frameworks";
+        path = [[NSBundle mainBundle] pathForResource:resource
+                                               ofType:type
+                                          inDirectory:directory];
     }
-    else
-    {
-        return [UIImage imageNamed:@"backArrow_black"];
-    }
+    
+    return path ? [UIImage imageWithContentsOfFile:path] :
+    [UIImage imageNamed:@"backArrow_black"];
 }
 
 + (NSArray *) normalizeScopes:(NSArray *)scopes
