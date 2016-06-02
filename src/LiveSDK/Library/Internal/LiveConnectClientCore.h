@@ -61,6 +61,10 @@
                delegate:(id<LiveAuthDelegate>)delegate
               userState:(id)userState;
 
+- (id) initWithClientId:(NSString *)clientId
+                 scopes:(NSArray *)scopes
+               delegate:(id<LiveAuthDelegate>)delegate;
+
 - (void) login:(UIViewController *)currentViewController
         scopes:(NSArray *)scopes
       delegate:(id<LiveAuthDelegate>)delegate
@@ -70,6 +74,10 @@
                   userState:(id)userState;
 
 - (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
+                          userState:(id)userState;
+
+- (void) refreshSessionWithDelegate:(id<LiveAuthDelegate>)delegate
+                       refreshToken:(NSString *)refreshToken
                           userState:(id)userState;
 
 - (LiveOperation *) sendRequestWithMethod:(NSString *)method
