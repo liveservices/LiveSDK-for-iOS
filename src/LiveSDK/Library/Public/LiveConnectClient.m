@@ -176,6 +176,12 @@
     return _liveClientCore.session;
 }
 
+- (void)setSession:(LiveConnectSession *) session
+{
+    [self validateInit];
+    _liveClientCore.session = session;
+}
+
 - (void) login:(UIViewController *) currentViewController
       delegate:(id<LiveAuthDelegate>) delegate
 {
